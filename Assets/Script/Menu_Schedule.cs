@@ -147,7 +147,7 @@ public class Menu_Schedule : UI_Menu
         string[] _tmp = TheSchedule.Period[Convert.ToInt32(SelectedCourse.Period.Split('~')[0])].Split('~')[0].Split(':');
         TimeSpan course_period = (new TimeSpan(Convert.ToInt32(_tmp[0]), Convert.ToInt32(_tmp[1]), 0)).Subtract(new TimeSpan(0,30,0));
         notifyTime = notifyTime.Date + course_period; 
-        MainSystem.SetNotify("上課時間:" + SelectedCourse.Time, notifyTime);
+        MainSystem.SetNotify(SelectedCourse.Name + "\n上課時間:" + SelectedCourse.Time, notifyTime);
         MsgBox.Msg("已設定提醒", "已設定提醒\n提醒時間:" + notifyTime.ToString());
     }
     public static DateTime GetNextWeekday(DateTime start, DayOfWeek day)

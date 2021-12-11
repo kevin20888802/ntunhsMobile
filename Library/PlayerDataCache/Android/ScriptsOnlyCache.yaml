@@ -67,79 +67,79 @@ ScriptsOnlyBuild:
     - Class: 104
       Script: {instanceID: 0}
     - Class: 114
-      Script: {instanceID: 1446}
+      Script: {instanceID: 1472}
     - Class: 114
-      Script: {instanceID: 1448}
+      Script: {instanceID: 1474}
     - Class: 114
-      Script: {instanceID: 1450}
+      Script: {instanceID: 1476}
     - Class: 114
-      Script: {instanceID: 1490}
+      Script: {instanceID: 1516}
     - Class: 114
-      Script: {instanceID: 1512}
+      Script: {instanceID: 1540}
     - Class: 114
-      Script: {instanceID: 1528}
+      Script: {instanceID: 1556}
     - Class: 114
-      Script: {instanceID: 1560}
+      Script: {instanceID: 1588}
     - Class: 114
-      Script: {instanceID: 1590}
+      Script: {instanceID: 1618}
     - Class: 114
-      Script: {instanceID: 1604}
+      Script: {instanceID: 1638}
     - Class: 114
-      Script: {instanceID: 1614}
+      Script: {instanceID: 1648}
     - Class: 114
-      Script: {instanceID: 1634}
+      Script: {instanceID: 1672}
     - Class: 114
-      Script: {instanceID: 1688}
+      Script: {instanceID: 1728}
     - Class: 114
-      Script: {instanceID: 1724}
+      Script: {instanceID: 1766}
     - Class: 114
-      Script: {instanceID: 1934}
+      Script: {instanceID: 1992}
     - Class: 114
-      Script: {instanceID: 1942}
+      Script: {instanceID: 2002}
     - Class: 114
-      Script: {instanceID: 1952}
+      Script: {instanceID: 2012}
     - Class: 114
-      Script: {instanceID: 2036}
+      Script: {instanceID: 2058}
     - Class: 114
-      Script: {instanceID: 2054}
+      Script: {instanceID: 2100}
     - Class: 114
-      Script: {instanceID: 2106}
+      Script: {instanceID: 2118}
     - Class: 114
-      Script: {instanceID: 2132}
+      Script: {instanceID: 2176}
     - Class: 114
-      Script: {instanceID: 2234}
+      Script: {instanceID: 2202}
     - Class: 114
-      Script: {instanceID: 2272}
+      Script: {instanceID: 2308}
     - Class: 114
-      Script: {instanceID: 2294}
+      Script: {instanceID: 2346}
     - Class: 114
-      Script: {instanceID: 2410}
+      Script: {instanceID: 2368}
     - Class: 114
-      Script: {instanceID: 2496}
+      Script: {instanceID: 2486}
     - Class: 114
-      Script: {instanceID: 2544}
+      Script: {instanceID: 2582}
     - Class: 114
-      Script: {instanceID: 2668}
+      Script: {instanceID: 2634}
     - Class: 114
-      Script: {instanceID: 2704}
+      Script: {instanceID: 2760}
     - Class: 114
-      Script: {instanceID: 2710}
+      Script: {instanceID: 2800}
     - Class: 114
-      Script: {instanceID: 2714}
+      Script: {instanceID: 2806}
     - Class: 114
-      Script: {instanceID: 2830}
+      Script: {instanceID: 2810}
     - Class: 114
-      Script: {instanceID: 2840}
+      Script: {instanceID: 2934}
     - Class: 114
-      Script: {instanceID: 2854}
+      Script: {instanceID: 2944}
     - Class: 114
-      Script: {instanceID: 2858}
+      Script: {instanceID: 2960}
     - Class: 114
-      Script: {instanceID: 2930}
+      Script: {instanceID: 2964}
     - Class: 114
-      Script: {instanceID: 2954}
+      Script: {instanceID: 3040}
     - Class: 114
-      Script: {instanceID: 28490}
+      Script: {instanceID: 3066}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 128
@@ -318,6 +318,12 @@ ScriptsOnlyBuild:
   - hash:
       serializedVersion: 2
       Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
+    assemblyName: Unity.Notifications.Android.dll
+    namespaceName: Unity.Notifications.Android
+    className: AndroidReceivedNotificationMainThreadDispatcher
+  - hash:
+      serializedVersion: 2
+      Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
     assemblyName: UnityEngine.TestRunner.dll
     namespaceName: UnityEngine.TestTools.TestRunner.Callbacks
     className: RemoteTestResultSender
@@ -351,6 +357,12 @@ ScriptsOnlyBuild:
     assemblyName: Unity.TextMeshPro.dll
     namespaceName: TMPro
     className: TMP_StyleSheet
+  - hash:
+      serializedVersion: 2
+      Hash: ad597a0bd7168851cb9cea2a462d9895
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: UI_CourseWork_Cell
   - hash:
       serializedVersion: 2
       Hash: 11a50274f5004a5772151fc3e5cc0b38
@@ -609,18 +621,6 @@ ScriptsOnlyBuild:
     assemblyName: Unity.TextMeshPro.dll
     namespaceName: TMPro
     className: TextContainer
-  - hash:
-      serializedVersion: 2
-      Hash: ad597a0bd7168851cb9cea2a462d9895
-    assemblyName: Assembly-CSharp.dll
-    namespaceName: 
-    className: UI_CourseWork_Cell
-  - hash:
-      serializedVersion: 2
-      Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
-    assemblyName: Unity.Notifications.Android.dll
-    namespaceName: Unity.Notifications.Android
-    className: AndroidReceivedNotificationMainThreadDispatcher
   platform: 13
   scenePathNames:
   - Assets/Scenes/Main.unity
