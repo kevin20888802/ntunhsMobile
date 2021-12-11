@@ -31,7 +31,7 @@
 - 比網頁版北護助手更大的介面  
 - 點選加入模擬可以將課程加入到模擬課表  
 - 如果無法加入(衝堂)時加入模擬按鈕將限制無法按直到沒有衝堂為止 
-- 按下匯出將匯出畫面
+- 按下匯出將匯出畫面  
 ![alt text](https://github.com/kevin20888802/ntunhsMobile/blob/main/readme/img/7.png?raw=true)
 ![alt text](https://github.com/kevin20888802/ntunhsMobile/blob/main/readme/img/8.png?raw=true)
 ![alt text](https://github.com/kevin20888802/ntunhsMobile/blob/main/readme/img/9.png?raw=true)
