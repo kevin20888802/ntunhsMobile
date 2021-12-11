@@ -2,6 +2,7 @@
 -a="D:\Programming\c#\20211117_0\ntunhsMobile\Library\PlayerScriptAssemblies\UnityEngine.TestRunner.dll"
 -a="D:\Programming\c#\20211117_0\ntunhsMobile\Library\PlayerScriptAssemblies\Unity.TextMeshPro.dll"
 -a="D:\Programming\c#\20211117_0\ntunhsMobile\Library\PlayerScriptAssemblies\UnityEngine.UI.dll"
+-a="D:\Programming\c#\20211117_0\ntunhsMobile\Library\PlayerScriptAssemblies\Unity.Notifications.Android.dll"
 -a="D:\Programming\c#\20211117_0\ntunhsMobile\Assets\Plugin\Newtonsoft.Json AOT\Newtonsoft.Json.dll"
 -a="D:\Programming\c#\20211117_0\ntunhsMobile\Assets\Plugin\Newtonsoft.Json Editor\Newtonsoft.Json.dll"
 -a="D:\Programming\c#\20211117_0\ntunhsMobile\Library\PackageCache\com.unity.ext.nunit@1.0.6\net35\unity-custom\nunit.framework.dll"

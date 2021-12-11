@@ -135,14 +135,14 @@ namespace kevin20888802.MsgBox
             AStat.Card = CardGet;
             Window.Find("CardSlot").GetComponent<CardSlot>().CardData = AStat;
         }*/
-        public static void PlayerNameInputBox()
+        public static IEnumerator MsgInputProcess(string i_title, string i_description, string i_default)
         {
-           Instantiate(Resources.Load("Prefab/UI/PlayerNameMsgBox"));
-        }
-        public static IEnumerator PlayerNameInputWait()
-        {
-            GameObject _msgBox = ((GameObject)Instantiate(Resources.Load("Prefab/UI/PlayerNameMsgBox"))); // MsgBox Place.
-            yield return new WaitWhile(() => _msgBox != null);
+            MsgInputBox _msgBox = ((GameObject)Instantiate(Resources.Load("Prefab/UI/MsgInputBox"))).GetComponent<MsgInputBox>(); // MsgBox Place.
+            _msgBox.SetText(i_title, i_description);
+            _msgBox.inputField.text = i_default;
+            yield return new WaitWhile(() => _msgBox.Done != true);
+            yield return _msgBox.inputField.text;
+            Destroy(_msgBox.gameObject);
         }
 
         public static void NullAct()

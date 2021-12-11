@@ -12,9 +12,12 @@ ScriptsOnlyBuild:
     - Menu_Login
     - Menu_Schedule
     - Menu_Scores
+    - Menu_Work
+    - MsgInputBox
     - UI_ArticleBox
     - UI_AutoResizeText
     - UI_CourseSearchCell
+    - UI_CourseWork_Cell
     - UI_Table_Text
     - kevin20888802.MsgBox.MsgBoxBase
     Unity.Mobile.AndroidLogcat.Editor.dll:
@@ -64,73 +67,79 @@ ScriptsOnlyBuild:
     - Class: 104
       Script: {instanceID: 0}
     - Class: 114
-      Script: {instanceID: 1444}
-    - Class: 114
       Script: {instanceID: 1446}
     - Class: 114
       Script: {instanceID: 1448}
     - Class: 114
-      Script: {instanceID: 1488}
+      Script: {instanceID: 1450}
     - Class: 114
-      Script: {instanceID: 1510}
+      Script: {instanceID: 1490}
     - Class: 114
-      Script: {instanceID: 1526}
+      Script: {instanceID: 1512}
     - Class: 114
-      Script: {instanceID: 1558}
+      Script: {instanceID: 1528}
     - Class: 114
-      Script: {instanceID: 1588}
+      Script: {instanceID: 1560}
     - Class: 114
-      Script: {instanceID: 1602}
+      Script: {instanceID: 1590}
     - Class: 114
-      Script: {instanceID: 1612}
+      Script: {instanceID: 1604}
     - Class: 114
-      Script: {instanceID: 1632}
+      Script: {instanceID: 1614}
     - Class: 114
-      Script: {instanceID: 1930}
+      Script: {instanceID: 1634}
     - Class: 114
-      Script: {instanceID: 1938}
+      Script: {instanceID: 1688}
     - Class: 114
-      Script: {instanceID: 1948}
+      Script: {instanceID: 1724}
     - Class: 114
-      Script: {instanceID: 2030}
+      Script: {instanceID: 1934}
     - Class: 114
-      Script: {instanceID: 2048}
+      Script: {instanceID: 1942}
     - Class: 114
-      Script: {instanceID: 2100}
+      Script: {instanceID: 1952}
     - Class: 114
-      Script: {instanceID: 2126}
+      Script: {instanceID: 2036}
     - Class: 114
-      Script: {instanceID: 2228}
+      Script: {instanceID: 2054}
     - Class: 114
-      Script: {instanceID: 2266}
+      Script: {instanceID: 2106}
     - Class: 114
-      Script: {instanceID: 2288}
+      Script: {instanceID: 2132}
     - Class: 114
-      Script: {instanceID: 2402}
+      Script: {instanceID: 2234}
     - Class: 114
-      Script: {instanceID: 2486}
+      Script: {instanceID: 2272}
     - Class: 114
-      Script: {instanceID: 2532}
+      Script: {instanceID: 2294}
     - Class: 114
-      Script: {instanceID: 2656}
+      Script: {instanceID: 2410}
     - Class: 114
-      Script: {instanceID: 2692}
+      Script: {instanceID: 2496}
     - Class: 114
-      Script: {instanceID: 2698}
+      Script: {instanceID: 2544}
     - Class: 114
-      Script: {instanceID: 2702}
+      Script: {instanceID: 2668}
     - Class: 114
-      Script: {instanceID: 2818}
+      Script: {instanceID: 2704}
     - Class: 114
-      Script: {instanceID: 2828}
+      Script: {instanceID: 2710}
     - Class: 114
-      Script: {instanceID: 2842}
+      Script: {instanceID: 2714}
     - Class: 114
-      Script: {instanceID: 2846}
+      Script: {instanceID: 2830}
     - Class: 114
-      Script: {instanceID: 2918}
+      Script: {instanceID: 2840}
     - Class: 114
-      Script: {instanceID: 2942}
+      Script: {instanceID: 2854}
+    - Class: 114
+      Script: {instanceID: 2858}
+    - Class: 114
+      Script: {instanceID: 2930}
+    - Class: 114
+      Script: {instanceID: 2954}
+    - Class: 114
+      Script: {instanceID: 28490}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 128
@@ -152,16 +161,16 @@ ScriptsOnlyBuild:
   scriptHashData:
   - hash:
       serializedVersion: 2
-      Hash: ae83e830e7a90c0aff918c4c2e520825
-    assemblyName: UnityEngine.UI.dll
-    namespaceName: UnityEngine.UI
-    className: GraphicRaycaster
-  - hash:
-      serializedVersion: 2
       Hash: 699619b86d9359741a4f58540298c80b
     assemblyName: UnityEngine.UI.dll
     namespaceName: UnityEngine.UI
     className: Text
+  - hash:
+      serializedVersion: 2
+      Hash: ae83e830e7a90c0aff918c4c2e520825
+    assemblyName: UnityEngine.UI.dll
+    namespaceName: UnityEngine.UI
+    className: GraphicRaycaster
   - hash:
       serializedVersion: 2
       Hash: a6e561615949734e9f12f9b61661f43e
@@ -188,7 +197,7 @@ ScriptsOnlyBuild:
     className: TMP_InputField
   - hash:
       serializedVersion: 2
-      Hash: a1e47ce2356790e4b391f296934b3bea
+      Hash: 132d4379b2bfd5e819061db8d0e7bd72
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: UI_CourseSearchCell
@@ -218,7 +227,7 @@ ScriptsOnlyBuild:
     className: Selectable
   - hash:
       serializedVersion: 2
-      Hash: 11a50274f5004a5772151fc3e5cc0b38
+      Hash: e555286b35ddd1dfd7669751a64b241c
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: Menu_Schedule
@@ -260,10 +269,22 @@ ScriptsOnlyBuild:
     className: BaseInput
   - hash:
       serializedVersion: 2
+      Hash: 0acfc0159706f565a63e22794b614bc3
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: Menu_Work
+  - hash:
+      serializedVersion: 2
       Hash: 300fd99066f8c288e85f5e81ce65fe34
     assemblyName: Unity.TextMeshPro.dll
     namespaceName: TMPro
     className: TMP_FontAsset
+  - hash:
+      serializedVersion: 2
+      Hash: d1405f6321ef6a82c23204e9ad791976
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: MsgInputBox
   - hash:
       serializedVersion: 2
       Hash: 18c222bef9ae745ce69ddde9b74337ca
@@ -344,7 +365,7 @@ ScriptsOnlyBuild:
     className: PlaymodeTestsController
   - hash:
       serializedVersion: 2
-      Hash: 775414f08b652b8d8df2817f4561d507
+      Hash: e3c551bf69b23186f11a2da8b3a54fc6
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: Menu_CourseSearch_Result
@@ -368,7 +389,7 @@ ScriptsOnlyBuild:
     className: RawImage
   - hash:
       serializedVersion: 2
-      Hash: 86baa3b738a23b5eb6d9d0153d129e25
+      Hash: 8a1110ffefa02facf5679da8e1b5ed14
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: MainSystem
@@ -414,6 +435,12 @@ ScriptsOnlyBuild:
     assemblyName: Unity.TextMeshPro.dll
     namespaceName: TMPro
     className: TMP_Settings
+  - hash:
+      serializedVersion: 2
+      Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: CoroutineWithData
   - hash:
       serializedVersion: 2
       Hash: cf9f5cf2c3145a37ac07f00e50e460f9
@@ -582,6 +609,18 @@ ScriptsOnlyBuild:
     assemblyName: Unity.TextMeshPro.dll
     namespaceName: TMPro
     className: TextContainer
+  - hash:
+      serializedVersion: 2
+      Hash: ad597a0bd7168851cb9cea2a462d9895
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: UI_CourseWork_Cell
+  - hash:
+      serializedVersion: 2
+      Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
+    assemblyName: Unity.Notifications.Android.dll
+    namespaceName: Unity.Notifications.Android
+    className: AndroidReceivedNotificationMainThreadDispatcher
   platform: 13
   scenePathNames:
   - Assets/Scenes/Main.unity

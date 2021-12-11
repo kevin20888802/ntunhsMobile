@@ -3,35 +3,11 @@
     "m_SelectedPackage": {
         "deviceId": "LMG900EMWe8e05d79",
         "name": "com.ntunhs.ntunhsMobile",
-        "processId": 24147,
+        "processId": 14025,
         "exited": false
     },
     "m_SelectedPriority": 0,
     "m_KnownPackagesForSerialization": [
-        {
-            "deviceId": "LMG900EMWe8e05d79",
-            "name": "com.lge.launcher3",
-            "processId": 13020,
-            "exited": false
-        },
-        {
-            "deviceId": "LMG900EMWe8e05d79",
-            "name": "com.ntunhs.ntunhsMobile",
-            "processId": 18727,
-            "exited": true
-        },
-        {
-            "deviceId": "LMG900EMWe8e05d79",
-            "name": "com.lge.clock",
-            "processId": 19548,
-            "exited": true
-        },
-        {
-            "deviceId": "LMG900EMWe8e05d79",
-            "name": "com.ntunhs.ntunhsMobile",
-            "processId": 20580,
-            "exited": true
-        },
         {
             "deviceId": "LMG900EMWe8e05d79",
             "name": "com.lge.clock",
@@ -48,12 +24,36 @@
             "deviceId": "LMG900EMWe8e05d79",
             "name": "com.lge.clock",
             "processId": 22865,
-            "exited": false
+            "exited": true
         },
         {
             "deviceId": "LMG900EMWe8e05d79",
             "name": "com.ntunhs.ntunhsMobile",
             "processId": 24147,
+            "exited": true
+        },
+        {
+            "deviceId": "LMG900EMWe8e05d79",
+            "name": "com.ntunhs.ntunhsMobile",
+            "processId": 30641,
+            "exited": true
+        },
+        {
+            "deviceId": "LMG900EMWe8e05d79",
+            "name": "com.ntunhs.ntunhsMobile",
+            "processId": 30917,
+            "exited": false
+        },
+        {
+            "deviceId": "LMG900EMWe8e05d79",
+            "name": "com.ntunhs.ntunhsMobile",
+            "processId": 11365,
+            "exited": false
+        },
+        {
+            "deviceId": "LMG900EMWe8e05d79",
+            "name": "com.ntunhs.ntunhsMobile",
+            "processId": 14025,
             "exited": false
         }
     ],

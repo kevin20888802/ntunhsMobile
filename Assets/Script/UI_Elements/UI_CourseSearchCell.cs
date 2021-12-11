@@ -6,15 +6,16 @@ using UnityEngine.UI;
 public class UI_CourseSearchCell : MonoBehaviour
 {
     public Menu_CourseSearch_Result Menu_CourseSearch_Result;
-    public Dictionary<string, string> Data;
+    public Course_Detail Data;
+    public Button AddBtn;
     public Text UI_Title;
     public Text UI_Description;
     public void UpdateShow()
     {
         if (Data != null)
         {
-            UI_Title.text = Data["Course_Name"] + "(" + Data["Period"] + "節/" + Data["Credits"] + "學分)";
-            UI_Description.text = Data["Faculty_Name"] + "\n" + Data["Open_Teacher"];
+            UI_Title.text = Data.Name + "(" + Data.Period + "節/" + Data.Credit + "學分)";
+            UI_Description.text = Data.Faculty_Name + "\n" + Data.Teacher;
         }
     }
     public void ShowDetail()
@@ -23,5 +24,10 @@ public class UI_CourseSearchCell : MonoBehaviour
         {
             Menu_CourseSearch_Result.ShowDetail(Data);
         }
+    }
+
+    public void AddToSchedule()
+    {
+        Menu_CourseSearch_Result.AddScheduleCourse(Data);
     }
 }
