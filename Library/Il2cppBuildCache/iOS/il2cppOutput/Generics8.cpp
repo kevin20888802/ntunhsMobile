@@ -127,6 +127,8 @@ struct Dictionary_2_tBD1E3221EBD04CEBDA49B84779912E91F56B958D;
 struct Dictionary_2_t1A7031D56269D606C19F997EEDB8F24872DACD94;
 // System.Collections.Generic.Dictionary`2<System.String,System.Int32>
 struct Dictionary_2_tC94E9875910491F8130C2DC8B11E4D1548A55162;
+// System.Collections.Generic.Dictionary`2<System.String,System.String>
+struct Dictionary_2_tDE3227CA5E7A32F5070BD24C69F42204A3ADE9D5;
 // System.Collections.Generic.Dictionary`2<MS.Internal.Xml.Cache.XPathNodeRef,MS.Internal.Xml.Cache.XPathNodeRef>
 struct Dictionary_2_t4EDA304EB239333A04A5B9AA8551E2714497961C;
 // System.Collections.Generic.EqualityComparer`1<System.ValueTuple`2<System.Object,System.Object>>
@@ -583,6 +585,7 @@ IL2CPP_EXTERN_C const RuntimeMethod* InternalEnumerator_1_get_Current_mBE89F811D
 IL2CPP_EXTERN_C const RuntimeMethod* InternalEnumerator_1_get_Current_mC4E64E37DF9AF42FDE3E10FCFE3CF79E32F52424_RuntimeMethod_var;
 IL2CPP_EXTERN_C const RuntimeMethod* InternalEnumerator_1_get_Current_mC577C73AA60F5EDC04079D5F67983C93F09CF830_RuntimeMethod_var;
 IL2CPP_EXTERN_C const RuntimeMethod* InternalEnumerator_1_get_Current_mC6A5089922F1D8855FFDCF5638F6766E0C544BDC_RuntimeMethod_var;
+IL2CPP_EXTERN_C const RuntimeMethod* InternalEnumerator_1_get_Current_mCBF24378A1043C03B40A1B327117284E840591C4_RuntimeMethod_var;
 IL2CPP_EXTERN_C const RuntimeMethod* InternalEnumerator_1_get_Current_mCD3E9E76876065822A6EA54DB4E5ADEBC4F5CBA2_RuntimeMethod_var;
 IL2CPP_EXTERN_C const RuntimeMethod* InternalEnumerator_1_get_Current_mD8FFE2A5CFC6D6BBD48924267FA8DC7773A6E67B_RuntimeMethod_var;
 IL2CPP_EXTERN_C const RuntimeMethod* InternalEnumerator_1_get_Current_mDC21A2DF07DBBF4058B6BDF5ECE5376A6C6D7BA4_RuntimeMethod_var;
@@ -5803,6 +5806,53 @@ public:
 	}
 
 	inline static int32_t get_offset_of_idx_1() { return static_cast<int32_t>(offsetof(InternalEnumerator_1_t559C659DB8782FA7ED5921D7350D888127DAD6C5, ___idx_1)); }
+	inline int32_t get_idx_1() const { return ___idx_1; }
+	inline int32_t* get_address_of_idx_1() { return &___idx_1; }
+	inline void set_idx_1(int32_t value)
+	{
+		___idx_1 = value;
+	}
+};
+
+// Native definition for P/Invoke marshalling of System.Array/InternalEnumerator`1
+#ifndef InternalEnumerator_1_t37B1DF66175FF6BD02352E6D77EF8F4504A012D5_marshaled_pinvoke_define
+#define InternalEnumerator_1_t37B1DF66175FF6BD02352E6D77EF8F4504A012D5_marshaled_pinvoke_define
+struct InternalEnumerator_1_t37B1DF66175FF6BD02352E6D77EF8F4504A012D5_marshaled_pinvoke
+{
+	RuntimeArray * ___array_0;
+	int32_t ___idx_1;
+};
+#endif
+// Native definition for COM marshalling of System.Array/InternalEnumerator`1
+#ifndef InternalEnumerator_1_t37B1DF66175FF6BD02352E6D77EF8F4504A012D5_marshaled_com_define
+#define InternalEnumerator_1_t37B1DF66175FF6BD02352E6D77EF8F4504A012D5_marshaled_com_define
+struct InternalEnumerator_1_t37B1DF66175FF6BD02352E6D77EF8F4504A012D5_marshaled_com
+{
+	RuntimeArray * ___array_0;
+	int32_t ___idx_1;
+};
+#endif
+
+// System.Array/InternalEnumerator`1<Unity.Notifications.iOS.iOSNotificationWithUserInfo>
+struct InternalEnumerator_1_t585F7CDD6486AAF608BA5B8302002A08AA57E547 
+{
+public:
+	// System.Array System.Array/InternalEnumerator`1::array
+	RuntimeArray * ___array_0;
+	// System.Int32 System.Array/InternalEnumerator`1::idx
+	int32_t ___idx_1;
+
+public:
+	inline static int32_t get_offset_of_array_0() { return static_cast<int32_t>(offsetof(InternalEnumerator_1_t585F7CDD6486AAF608BA5B8302002A08AA57E547, ___array_0)); }
+	inline RuntimeArray * get_array_0() const { return ___array_0; }
+	inline RuntimeArray ** get_address_of_array_0() { return &___array_0; }
+	inline void set_array_0(RuntimeArray * value)
+	{
+		___array_0 = value;
+		Il2CppCodeGenWriteBarrier((void**)(&___array_0), (void*)value);
+	}
+
+	inline static int32_t get_offset_of_idx_1() { return static_cast<int32_t>(offsetof(InternalEnumerator_1_t585F7CDD6486AAF608BA5B8302002A08AA57E547, ___idx_1)); }
 	inline int32_t get_idx_1() const { return ___idx_1; }
 	inline int32_t* get_address_of_idx_1() { return &___idx_1; }
 	inline void set_idx_1(int32_t value)
@@ -14678,6 +14728,292 @@ public:
 };
 
 
+// Unity.Notifications.iOS.iOSNotificationData
+struct iOSNotificationData_t59408B0D12D0720DBB6AF7F0E9619E4880FDB074 
+{
+public:
+	// System.String Unity.Notifications.iOS.iOSNotificationData::identifier
+	String_t* ___identifier_0;
+	// System.String Unity.Notifications.iOS.iOSNotificationData::title
+	String_t* ___title_1;
+	// System.String Unity.Notifications.iOS.iOSNotificationData::body
+	String_t* ___body_2;
+	// System.Int32 Unity.Notifications.iOS.iOSNotificationData::badge
+	int32_t ___badge_3;
+	// System.String Unity.Notifications.iOS.iOSNotificationData::subtitle
+	String_t* ___subtitle_4;
+	// System.String Unity.Notifications.iOS.iOSNotificationData::categoryIdentifier
+	String_t* ___categoryIdentifier_5;
+	// System.String Unity.Notifications.iOS.iOSNotificationData::threadIdentifier
+	String_t* ___threadIdentifier_6;
+	// System.IntPtr Unity.Notifications.iOS.iOSNotificationData::userInfo
+	intptr_t ___userInfo_7;
+	// System.Int32 Unity.Notifications.iOS.iOSNotificationData::triggerType
+	int32_t ___triggerType_8;
+	// System.Boolean Unity.Notifications.iOS.iOSNotificationData::repeats
+	bool ___repeats_9;
+	// System.Int32 Unity.Notifications.iOS.iOSNotificationData::timeTriggerInterval
+	int32_t ___timeTriggerInterval_10;
+	// System.Int32 Unity.Notifications.iOS.iOSNotificationData::calendarTriggerYear
+	int32_t ___calendarTriggerYear_11;
+	// System.Int32 Unity.Notifications.iOS.iOSNotificationData::calendarTriggerMonth
+	int32_t ___calendarTriggerMonth_12;
+	// System.Int32 Unity.Notifications.iOS.iOSNotificationData::calendarTriggerDay
+	int32_t ___calendarTriggerDay_13;
+	// System.Int32 Unity.Notifications.iOS.iOSNotificationData::calendarTriggerHour
+	int32_t ___calendarTriggerHour_14;
+	// System.Int32 Unity.Notifications.iOS.iOSNotificationData::calendarTriggerMinute
+	int32_t ___calendarTriggerMinute_15;
+	// System.Int32 Unity.Notifications.iOS.iOSNotificationData::calendarTriggerSecond
+	int32_t ___calendarTriggerSecond_16;
+	// System.Single Unity.Notifications.iOS.iOSNotificationData::locationTriggerCenterX
+	float ___locationTriggerCenterX_17;
+	// System.Single Unity.Notifications.iOS.iOSNotificationData::locationTriggerCenterY
+	float ___locationTriggerCenterY_18;
+	// System.Single Unity.Notifications.iOS.iOSNotificationData::locationTriggerRadius
+	float ___locationTriggerRadius_19;
+	// System.Boolean Unity.Notifications.iOS.iOSNotificationData::locationTriggerNotifyOnEntry
+	bool ___locationTriggerNotifyOnEntry_20;
+	// System.Boolean Unity.Notifications.iOS.iOSNotificationData::locationTriggerNotifyOnExit
+	bool ___locationTriggerNotifyOnExit_21;
+
+public:
+	inline static int32_t get_offset_of_identifier_0() { return static_cast<int32_t>(offsetof(iOSNotificationData_t59408B0D12D0720DBB6AF7F0E9619E4880FDB074, ___identifier_0)); }
+	inline String_t* get_identifier_0() const { return ___identifier_0; }
+	inline String_t** get_address_of_identifier_0() { return &___identifier_0; }
+	inline void set_identifier_0(String_t* value)
+	{
+		___identifier_0 = value;
+		Il2CppCodeGenWriteBarrier((void**)(&___identifier_0), (void*)value);
+	}
+
+	inline static int32_t get_offset_of_title_1() { return static_cast<int32_t>(offsetof(iOSNotificationData_t59408B0D12D0720DBB6AF7F0E9619E4880FDB074, ___title_1)); }
+	inline String_t* get_title_1() const { return ___title_1; }
+	inline String_t** get_address_of_title_1() { return &___title_1; }
+	inline void set_title_1(String_t* value)
+	{
+		___title_1 = value;
+		Il2CppCodeGenWriteBarrier((void**)(&___title_1), (void*)value);
+	}
+
+	inline static int32_t get_offset_of_body_2() { return static_cast<int32_t>(offsetof(iOSNotificationData_t59408B0D12D0720DBB6AF7F0E9619E4880FDB074, ___body_2)); }
+	inline String_t* get_body_2() const { return ___body_2; }
+	inline String_t** get_address_of_body_2() { return &___body_2; }
+	inline void set_body_2(String_t* value)
+	{
+		___body_2 = value;
+		Il2CppCodeGenWriteBarrier((void**)(&___body_2), (void*)value);
+	}
+
+	inline static int32_t get_offset_of_badge_3() { return static_cast<int32_t>(offsetof(iOSNotificationData_t59408B0D12D0720DBB6AF7F0E9619E4880FDB074, ___badge_3)); }
+	inline int32_t get_badge_3() const { return ___badge_3; }
+	inline int32_t* get_address_of_badge_3() { return &___badge_3; }
+	inline void set_badge_3(int32_t value)
+	{
+		___badge_3 = value;
+	}
+
+	inline static int32_t get_offset_of_subtitle_4() { return static_cast<int32_t>(offsetof(iOSNotificationData_t59408B0D12D0720DBB6AF7F0E9619E4880FDB074, ___subtitle_4)); }
+	inline String_t* get_subtitle_4() const { return ___subtitle_4; }
+	inline String_t** get_address_of_subtitle_4() { return &___subtitle_4; }
+	inline void set_subtitle_4(String_t* value)
+	{
+		___subtitle_4 = value;
+		Il2CppCodeGenWriteBarrier((void**)(&___subtitle_4), (void*)value);
+	}
+
+	inline static int32_t get_offset_of_categoryIdentifier_5() { return static_cast<int32_t>(offsetof(iOSNotificationData_t59408B0D12D0720DBB6AF7F0E9619E4880FDB074, ___categoryIdentifier_5)); }
+	inline String_t* get_categoryIdentifier_5() const { return ___categoryIdentifier_5; }
+	inline String_t** get_address_of_categoryIdentifier_5() { return &___categoryIdentifier_5; }
+	inline void set_categoryIdentifier_5(String_t* value)
+	{
+		___categoryIdentifier_5 = value;
+		Il2CppCodeGenWriteBarrier((void**)(&___categoryIdentifier_5), (void*)value);
+	}
+
+	inline static int32_t get_offset_of_threadIdentifier_6() { return static_cast<int32_t>(offsetof(iOSNotificationData_t59408B0D12D0720DBB6AF7F0E9619E4880FDB074, ___threadIdentifier_6)); }
+	inline String_t* get_threadIdentifier_6() const { return ___threadIdentifier_6; }
+	inline String_t** get_address_of_threadIdentifier_6() { return &___threadIdentifier_6; }
+	inline void set_threadIdentifier_6(String_t* value)
+	{
+		___threadIdentifier_6 = value;
+		Il2CppCodeGenWriteBarrier((void**)(&___threadIdentifier_6), (void*)value);
+	}
+
+	inline static int32_t get_offset_of_userInfo_7() { return static_cast<int32_t>(offsetof(iOSNotificationData_t59408B0D12D0720DBB6AF7F0E9619E4880FDB074, ___userInfo_7)); }
+	inline intptr_t get_userInfo_7() const { return ___userInfo_7; }
+	inline intptr_t* get_address_of_userInfo_7() { return &___userInfo_7; }
+	inline void set_userInfo_7(intptr_t value)
+	{
+		___userInfo_7 = value;
+	}
+
+	inline static int32_t get_offset_of_triggerType_8() { return static_cast<int32_t>(offsetof(iOSNotificationData_t59408B0D12D0720DBB6AF7F0E9619E4880FDB074, ___triggerType_8)); }
+	inline int32_t get_triggerType_8() const { return ___triggerType_8; }
+	inline int32_t* get_address_of_triggerType_8() { return &___triggerType_8; }
+	inline void set_triggerType_8(int32_t value)
+	{
+		___triggerType_8 = value;
+	}
+
+	inline static int32_t get_offset_of_repeats_9() { return static_cast<int32_t>(offsetof(iOSNotificationData_t59408B0D12D0720DBB6AF7F0E9619E4880FDB074, ___repeats_9)); }
+	inline bool get_repeats_9() const { return ___repeats_9; }
+	inline bool* get_address_of_repeats_9() { return &___repeats_9; }
+	inline void set_repeats_9(bool value)
+	{
+		___repeats_9 = value;
+	}
+
+	inline static int32_t get_offset_of_timeTriggerInterval_10() { return static_cast<int32_t>(offsetof(iOSNotificationData_t59408B0D12D0720DBB6AF7F0E9619E4880FDB074, ___timeTriggerInterval_10)); }
+	inline int32_t get_timeTriggerInterval_10() const { return ___timeTriggerInterval_10; }
+	inline int32_t* get_address_of_timeTriggerInterval_10() { return &___timeTriggerInterval_10; }
+	inline void set_timeTriggerInterval_10(int32_t value)
+	{
+		___timeTriggerInterval_10 = value;
+	}
+
+	inline static int32_t get_offset_of_calendarTriggerYear_11() { return static_cast<int32_t>(offsetof(iOSNotificationData_t59408B0D12D0720DBB6AF7F0E9619E4880FDB074, ___calendarTriggerYear_11)); }
+	inline int32_t get_calendarTriggerYear_11() const { return ___calendarTriggerYear_11; }
+	inline int32_t* get_address_of_calendarTriggerYear_11() { return &___calendarTriggerYear_11; }
+	inline void set_calendarTriggerYear_11(int32_t value)
+	{
+		___calendarTriggerYear_11 = value;
+	}
+
+	inline static int32_t get_offset_of_calendarTriggerMonth_12() { return static_cast<int32_t>(offsetof(iOSNotificationData_t59408B0D12D0720DBB6AF7F0E9619E4880FDB074, ___calendarTriggerMonth_12)); }
+	inline int32_t get_calendarTriggerMonth_12() const { return ___calendarTriggerMonth_12; }
+	inline int32_t* get_address_of_calendarTriggerMonth_12() { return &___calendarTriggerMonth_12; }
+	inline void set_calendarTriggerMonth_12(int32_t value)
+	{
+		___calendarTriggerMonth_12 = value;
+	}
+
+	inline static int32_t get_offset_of_calendarTriggerDay_13() { return static_cast<int32_t>(offsetof(iOSNotificationData_t59408B0D12D0720DBB6AF7F0E9619E4880FDB074, ___calendarTriggerDay_13)); }
+	inline int32_t get_calendarTriggerDay_13() const { return ___calendarTriggerDay_13; }
+	inline int32_t* get_address_of_calendarTriggerDay_13() { return &___calendarTriggerDay_13; }
+	inline void set_calendarTriggerDay_13(int32_t value)
+	{
+		___calendarTriggerDay_13 = value;
+	}
+
+	inline static int32_t get_offset_of_calendarTriggerHour_14() { return static_cast<int32_t>(offsetof(iOSNotificationData_t59408B0D12D0720DBB6AF7F0E9619E4880FDB074, ___calendarTriggerHour_14)); }
+	inline int32_t get_calendarTriggerHour_14() const { return ___calendarTriggerHour_14; }
+	inline int32_t* get_address_of_calendarTriggerHour_14() { return &___calendarTriggerHour_14; }
+	inline void set_calendarTriggerHour_14(int32_t value)
+	{
+		___calendarTriggerHour_14 = value;
+	}
+
+	inline static int32_t get_offset_of_calendarTriggerMinute_15() { return static_cast<int32_t>(offsetof(iOSNotificationData_t59408B0D12D0720DBB6AF7F0E9619E4880FDB074, ___calendarTriggerMinute_15)); }
+	inline int32_t get_calendarTriggerMinute_15() const { return ___calendarTriggerMinute_15; }
+	inline int32_t* get_address_of_calendarTriggerMinute_15() { return &___calendarTriggerMinute_15; }
+	inline void set_calendarTriggerMinute_15(int32_t value)
+	{
+		___calendarTriggerMinute_15 = value;
+	}
+
+	inline static int32_t get_offset_of_calendarTriggerSecond_16() { return static_cast<int32_t>(offsetof(iOSNotificationData_t59408B0D12D0720DBB6AF7F0E9619E4880FDB074, ___calendarTriggerSecond_16)); }
+	inline int32_t get_calendarTriggerSecond_16() const { return ___calendarTriggerSecond_16; }
+	inline int32_t* get_address_of_calendarTriggerSecond_16() { return &___calendarTriggerSecond_16; }
+	inline void set_calendarTriggerSecond_16(int32_t value)
+	{
+		___calendarTriggerSecond_16 = value;
+	}
+
+	inline static int32_t get_offset_of_locationTriggerCenterX_17() { return static_cast<int32_t>(offsetof(iOSNotificationData_t59408B0D12D0720DBB6AF7F0E9619E4880FDB074, ___locationTriggerCenterX_17)); }
+	inline float get_locationTriggerCenterX_17() const { return ___locationTriggerCenterX_17; }
+	inline float* get_address_of_locationTriggerCenterX_17() { return &___locationTriggerCenterX_17; }
+	inline void set_locationTriggerCenterX_17(float value)
+	{
+		___locationTriggerCenterX_17 = value;
+	}
+
+	inline static int32_t get_offset_of_locationTriggerCenterY_18() { return static_cast<int32_t>(offsetof(iOSNotificationData_t59408B0D12D0720DBB6AF7F0E9619E4880FDB074, ___locationTriggerCenterY_18)); }
+	inline float get_locationTriggerCenterY_18() const { return ___locationTriggerCenterY_18; }
+	inline float* get_address_of_locationTriggerCenterY_18() { return &___locationTriggerCenterY_18; }
+	inline void set_locationTriggerCenterY_18(float value)
+	{
+		___locationTriggerCenterY_18 = value;
+	}
+
+	inline static int32_t get_offset_of_locationTriggerRadius_19() { return static_cast<int32_t>(offsetof(iOSNotificationData_t59408B0D12D0720DBB6AF7F0E9619E4880FDB074, ___locationTriggerRadius_19)); }
+	inline float get_locationTriggerRadius_19() const { return ___locationTriggerRadius_19; }
+	inline float* get_address_of_locationTriggerRadius_19() { return &___locationTriggerRadius_19; }
+	inline void set_locationTriggerRadius_19(float value)
+	{
+		___locationTriggerRadius_19 = value;
+	}
+
+	inline static int32_t get_offset_of_locationTriggerNotifyOnEntry_20() { return static_cast<int32_t>(offsetof(iOSNotificationData_t59408B0D12D0720DBB6AF7F0E9619E4880FDB074, ___locationTriggerNotifyOnEntry_20)); }
+	inline bool get_locationTriggerNotifyOnEntry_20() const { return ___locationTriggerNotifyOnEntry_20; }
+	inline bool* get_address_of_locationTriggerNotifyOnEntry_20() { return &___locationTriggerNotifyOnEntry_20; }
+	inline void set_locationTriggerNotifyOnEntry_20(bool value)
+	{
+		___locationTriggerNotifyOnEntry_20 = value;
+	}
+
+	inline static int32_t get_offset_of_locationTriggerNotifyOnExit_21() { return static_cast<int32_t>(offsetof(iOSNotificationData_t59408B0D12D0720DBB6AF7F0E9619E4880FDB074, ___locationTriggerNotifyOnExit_21)); }
+	inline bool get_locationTriggerNotifyOnExit_21() const { return ___locationTriggerNotifyOnExit_21; }
+	inline bool* get_address_of_locationTriggerNotifyOnExit_21() { return &___locationTriggerNotifyOnExit_21; }
+	inline void set_locationTriggerNotifyOnExit_21(bool value)
+	{
+		___locationTriggerNotifyOnExit_21 = value;
+	}
+};
+
+// Native definition for P/Invoke marshalling of Unity.Notifications.iOS.iOSNotificationData
+struct iOSNotificationData_t59408B0D12D0720DBB6AF7F0E9619E4880FDB074_marshaled_pinvoke
+{
+	char* ___identifier_0;
+	char* ___title_1;
+	char* ___body_2;
+	int32_t ___badge_3;
+	char* ___subtitle_4;
+	char* ___categoryIdentifier_5;
+	char* ___threadIdentifier_6;
+	intptr_t ___userInfo_7;
+	int32_t ___triggerType_8;
+	int32_t ___repeats_9;
+	int32_t ___timeTriggerInterval_10;
+	int32_t ___calendarTriggerYear_11;
+	int32_t ___calendarTriggerMonth_12;
+	int32_t ___calendarTriggerDay_13;
+	int32_t ___calendarTriggerHour_14;
+	int32_t ___calendarTriggerMinute_15;
+	int32_t ___calendarTriggerSecond_16;
+	float ___locationTriggerCenterX_17;
+	float ___locationTriggerCenterY_18;
+	float ___locationTriggerRadius_19;
+	int32_t ___locationTriggerNotifyOnEntry_20;
+	int32_t ___locationTriggerNotifyOnExit_21;
+};
+// Native definition for COM marshalling of Unity.Notifications.iOS.iOSNotificationData
+struct iOSNotificationData_t59408B0D12D0720DBB6AF7F0E9619E4880FDB074_marshaled_com
+{
+	Il2CppChar* ___identifier_0;
+	Il2CppChar* ___title_1;
+	Il2CppChar* ___body_2;
+	int32_t ___badge_3;
+	Il2CppChar* ___subtitle_4;
+	Il2CppChar* ___categoryIdentifier_5;
+	Il2CppChar* ___threadIdentifier_6;
+	intptr_t ___userInfo_7;
+	int32_t ___triggerType_8;
+	int32_t ___repeats_9;
+	int32_t ___timeTriggerInterval_10;
+	int32_t ___calendarTriggerYear_11;
+	int32_t ___calendarTriggerMonth_12;
+	int32_t ___calendarTriggerDay_13;
+	int32_t ___calendarTriggerHour_14;
+	int32_t ___calendarTriggerMinute_15;
+	int32_t ___calendarTriggerSecond_16;
+	float ___locationTriggerCenterX_17;
+	float ___locationTriggerCenterY_18;
+	float ___locationTriggerRadius_19;
+	int32_t ___locationTriggerNotifyOnEntry_20;
+	int32_t ___locationTriggerNotifyOnExit_21;
+};
+
 // UnityEngine.Camera/RenderRequestMode
 struct RenderRequestMode_tCB120B82DED523ADBA2D6093A1A8ABF17D94A313 
 {
@@ -16295,6 +16631,63 @@ struct X509ChainStatus_tB6C3677955C287CF97042F208630AA0F5ABF77FB_marshaled_com
 {
 	int32_t ___status_0;
 	Il2CppChar* ___info_1;
+};
+
+// Unity.Notifications.iOS.iOSNotificationWithUserInfo
+struct iOSNotificationWithUserInfo_t19F429915AFFB4E6A1CF092FA0F7041BF385B4E4 
+{
+public:
+	// Unity.Notifications.iOS.iOSNotificationData Unity.Notifications.iOS.iOSNotificationWithUserInfo::data
+	iOSNotificationData_t59408B0D12D0720DBB6AF7F0E9619E4880FDB074  ___data_0;
+	// System.Collections.Generic.Dictionary`2<System.String,System.String> Unity.Notifications.iOS.iOSNotificationWithUserInfo::userInfo
+	Dictionary_2_tDE3227CA5E7A32F5070BD24C69F42204A3ADE9D5 * ___userInfo_1;
+
+public:
+	inline static int32_t get_offset_of_data_0() { return static_cast<int32_t>(offsetof(iOSNotificationWithUserInfo_t19F429915AFFB4E6A1CF092FA0F7041BF385B4E4, ___data_0)); }
+	inline iOSNotificationData_t59408B0D12D0720DBB6AF7F0E9619E4880FDB074  get_data_0() const { return ___data_0; }
+	inline iOSNotificationData_t59408B0D12D0720DBB6AF7F0E9619E4880FDB074 * get_address_of_data_0() { return &___data_0; }
+	inline void set_data_0(iOSNotificationData_t59408B0D12D0720DBB6AF7F0E9619E4880FDB074  value)
+	{
+		___data_0 = value;
+		Il2CppCodeGenWriteBarrier((void**)&(((&___data_0))->___identifier_0), (void*)NULL);
+		#if IL2CPP_ENABLE_STRICT_WRITE_BARRIERS
+		Il2CppCodeGenWriteBarrier((void**)&(((&___data_0))->___title_1), (void*)NULL);
+		#endif
+		#if IL2CPP_ENABLE_STRICT_WRITE_BARRIERS
+		Il2CppCodeGenWriteBarrier((void**)&(((&___data_0))->___body_2), (void*)NULL);
+		#endif
+		#if IL2CPP_ENABLE_STRICT_WRITE_BARRIERS
+		Il2CppCodeGenWriteBarrier((void**)&(((&___data_0))->___subtitle_4), (void*)NULL);
+		#endif
+		#if IL2CPP_ENABLE_STRICT_WRITE_BARRIERS
+		Il2CppCodeGenWriteBarrier((void**)&(((&___data_0))->___categoryIdentifier_5), (void*)NULL);
+		#endif
+		#if IL2CPP_ENABLE_STRICT_WRITE_BARRIERS
+		Il2CppCodeGenWriteBarrier((void**)&(((&___data_0))->___threadIdentifier_6), (void*)NULL);
+		#endif
+	}
+
+	inline static int32_t get_offset_of_userInfo_1() { return static_cast<int32_t>(offsetof(iOSNotificationWithUserInfo_t19F429915AFFB4E6A1CF092FA0F7041BF385B4E4, ___userInfo_1)); }
+	inline Dictionary_2_tDE3227CA5E7A32F5070BD24C69F42204A3ADE9D5 * get_userInfo_1() const { return ___userInfo_1; }
+	inline Dictionary_2_tDE3227CA5E7A32F5070BD24C69F42204A3ADE9D5 ** get_address_of_userInfo_1() { return &___userInfo_1; }
+	inline void set_userInfo_1(Dictionary_2_tDE3227CA5E7A32F5070BD24C69F42204A3ADE9D5 * value)
+	{
+		___userInfo_1 = value;
+		Il2CppCodeGenWriteBarrier((void**)(&___userInfo_1), (void*)value);
+	}
+};
+
+// Native definition for P/Invoke marshalling of Unity.Notifications.iOS.iOSNotificationWithUserInfo
+struct iOSNotificationWithUserInfo_t19F429915AFFB4E6A1CF092FA0F7041BF385B4E4_marshaled_pinvoke
+{
+	iOSNotificationData_t59408B0D12D0720DBB6AF7F0E9619E4880FDB074_marshaled_pinvoke ___data_0;
+	Dictionary_2_tDE3227CA5E7A32F5070BD24C69F42204A3ADE9D5 * ___userInfo_1;
+};
+// Native definition for COM marshalling of Unity.Notifications.iOS.iOSNotificationWithUserInfo
+struct iOSNotificationWithUserInfo_t19F429915AFFB4E6A1CF092FA0F7041BF385B4E4_marshaled_com
+{
+	iOSNotificationData_t59408B0D12D0720DBB6AF7F0E9619E4880FDB074_marshaled_com ___data_0;
+	Dictionary_2_tDE3227CA5E7A32F5070BD24C69F42204A3ADE9D5 * ___userInfo_1;
 };
 
 // UnityEngine.Camera/RenderRequest
@@ -18473,6 +18866,18 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR XPathNodeRef_t2A79A2C8D785DF72D2F344E0E216A8C
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void InternalEnumerator_1_System_Collections_IEnumerator_Reset_m46F710C8087B2C129690ED90F2773023E6E085DE_gshared (InternalEnumerator_1_t559C659DB8782FA7ED5921D7350D888127DAD6C5 * __this, const RuntimeMethod* method);
 // System.Object System.Array/InternalEnumerator`1<MS.Internal.Xml.Cache.XPathNodeRef>::System.Collections.IEnumerator.get_Current()
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR RuntimeObject * InternalEnumerator_1_System_Collections_IEnumerator_get_Current_m115B1320297BFA34CEC3CC79AF64F3E8D32A57D5_gshared (InternalEnumerator_1_t559C659DB8782FA7ED5921D7350D888127DAD6C5 * __this, const RuntimeMethod* method);
+// System.Void System.Array/InternalEnumerator`1<Unity.Notifications.iOS.iOSNotificationWithUserInfo>::.ctor(System.Array)
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void InternalEnumerator_1__ctor_m240C8A572DC5AEEB699C4D7D597D9DA952604ED5_gshared (InternalEnumerator_1_t585F7CDD6486AAF608BA5B8302002A08AA57E547 * __this, RuntimeArray * ___array0, const RuntimeMethod* method);
+// System.Void System.Array/InternalEnumerator`1<Unity.Notifications.iOS.iOSNotificationWithUserInfo>::Dispose()
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void InternalEnumerator_1_Dispose_m3260A8F6BFE7A87B33639CA7B9B7190362DC59D8_gshared (InternalEnumerator_1_t585F7CDD6486AAF608BA5B8302002A08AA57E547 * __this, const RuntimeMethod* method);
+// System.Boolean System.Array/InternalEnumerator`1<Unity.Notifications.iOS.iOSNotificationWithUserInfo>::MoveNext()
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool InternalEnumerator_1_MoveNext_mC34FE62A1BCC1136A8B18F1CFD1E46A8965A9EF8_gshared (InternalEnumerator_1_t585F7CDD6486AAF608BA5B8302002A08AA57E547 * __this, const RuntimeMethod* method);
+// T System.Array/InternalEnumerator`1<Unity.Notifications.iOS.iOSNotificationWithUserInfo>::get_Current()
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR iOSNotificationWithUserInfo_t19F429915AFFB4E6A1CF092FA0F7041BF385B4E4  InternalEnumerator_1_get_Current_mCBF24378A1043C03B40A1B327117284E840591C4_gshared (InternalEnumerator_1_t585F7CDD6486AAF608BA5B8302002A08AA57E547 * __this, const RuntimeMethod* method);
+// System.Void System.Array/InternalEnumerator`1<Unity.Notifications.iOS.iOSNotificationWithUserInfo>::System.Collections.IEnumerator.Reset()
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void InternalEnumerator_1_System_Collections_IEnumerator_Reset_mF5516AE1432CF21CB2CC652AE5DC94F920415106_gshared (InternalEnumerator_1_t585F7CDD6486AAF608BA5B8302002A08AA57E547 * __this, const RuntimeMethod* method);
+// System.Object System.Array/InternalEnumerator`1<Unity.Notifications.iOS.iOSNotificationWithUserInfo>::System.Collections.IEnumerator.get_Current()
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR RuntimeObject * InternalEnumerator_1_System_Collections_IEnumerator_get_Current_m41BB5DF7805EFB687065EF0DFCB3E50250BBFE46_gshared (InternalEnumerator_1_t585F7CDD6486AAF608BA5B8302002A08AA57E547 * __this, const RuntimeMethod* method);
 // System.Void System.Array/InternalEnumerator`1<System.ComponentModel.AttributeCollection/AttributeEntry>::.ctor(System.Array)
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void InternalEnumerator_1__ctor_m2BD70FA5F91F537626741904F90EC535D69D8D9D_gshared (InternalEnumerator_1_t1C06FB804D0348F2D913FFB95C91757F938AEEAF * __this, RuntimeArray * ___array0, const RuntimeMethod* method);
 // System.Void System.Array/InternalEnumerator`1<System.ComponentModel.AttributeCollection/AttributeEntry>::Dispose()
@@ -20491,6 +20896,36 @@ inline void InternalEnumerator_1_System_Collections_IEnumerator_Reset_m46F710C80
 inline RuntimeObject * InternalEnumerator_1_System_Collections_IEnumerator_get_Current_m115B1320297BFA34CEC3CC79AF64F3E8D32A57D5 (InternalEnumerator_1_t559C659DB8782FA7ED5921D7350D888127DAD6C5 * __this, const RuntimeMethod* method)
 {
 	return ((  RuntimeObject * (*) (InternalEnumerator_1_t559C659DB8782FA7ED5921D7350D888127DAD6C5 *, const RuntimeMethod*))InternalEnumerator_1_System_Collections_IEnumerator_get_Current_m115B1320297BFA34CEC3CC79AF64F3E8D32A57D5_gshared)(__this, method);
+}
+// System.Void System.Array/InternalEnumerator`1<Unity.Notifications.iOS.iOSNotificationWithUserInfo>::.ctor(System.Array)
+inline void InternalEnumerator_1__ctor_m240C8A572DC5AEEB699C4D7D597D9DA952604ED5 (InternalEnumerator_1_t585F7CDD6486AAF608BA5B8302002A08AA57E547 * __this, RuntimeArray * ___array0, const RuntimeMethod* method)
+{
+	((  void (*) (InternalEnumerator_1_t585F7CDD6486AAF608BA5B8302002A08AA57E547 *, RuntimeArray *, const RuntimeMethod*))InternalEnumerator_1__ctor_m240C8A572DC5AEEB699C4D7D597D9DA952604ED5_gshared)(__this, ___array0, method);
+}
+// System.Void System.Array/InternalEnumerator`1<Unity.Notifications.iOS.iOSNotificationWithUserInfo>::Dispose()
+inline void InternalEnumerator_1_Dispose_m3260A8F6BFE7A87B33639CA7B9B7190362DC59D8 (InternalEnumerator_1_t585F7CDD6486AAF608BA5B8302002A08AA57E547 * __this, const RuntimeMethod* method)
+{
+	((  void (*) (InternalEnumerator_1_t585F7CDD6486AAF608BA5B8302002A08AA57E547 *, const RuntimeMethod*))InternalEnumerator_1_Dispose_m3260A8F6BFE7A87B33639CA7B9B7190362DC59D8_gshared)(__this, method);
+}
+// System.Boolean System.Array/InternalEnumerator`1<Unity.Notifications.iOS.iOSNotificationWithUserInfo>::MoveNext()
+inline bool InternalEnumerator_1_MoveNext_mC34FE62A1BCC1136A8B18F1CFD1E46A8965A9EF8 (InternalEnumerator_1_t585F7CDD6486AAF608BA5B8302002A08AA57E547 * __this, const RuntimeMethod* method)
+{
+	return ((  bool (*) (InternalEnumerator_1_t585F7CDD6486AAF608BA5B8302002A08AA57E547 *, const RuntimeMethod*))InternalEnumerator_1_MoveNext_mC34FE62A1BCC1136A8B18F1CFD1E46A8965A9EF8_gshared)(__this, method);
+}
+// T System.Array/InternalEnumerator`1<Unity.Notifications.iOS.iOSNotificationWithUserInfo>::get_Current()
+inline iOSNotificationWithUserInfo_t19F429915AFFB4E6A1CF092FA0F7041BF385B4E4  InternalEnumerator_1_get_Current_mCBF24378A1043C03B40A1B327117284E840591C4 (InternalEnumerator_1_t585F7CDD6486AAF608BA5B8302002A08AA57E547 * __this, const RuntimeMethod* method)
+{
+	return ((  iOSNotificationWithUserInfo_t19F429915AFFB4E6A1CF092FA0F7041BF385B4E4  (*) (InternalEnumerator_1_t585F7CDD6486AAF608BA5B8302002A08AA57E547 *, const RuntimeMethod*))InternalEnumerator_1_get_Current_mCBF24378A1043C03B40A1B327117284E840591C4_gshared)(__this, method);
+}
+// System.Void System.Array/InternalEnumerator`1<Unity.Notifications.iOS.iOSNotificationWithUserInfo>::System.Collections.IEnumerator.Reset()
+inline void InternalEnumerator_1_System_Collections_IEnumerator_Reset_mF5516AE1432CF21CB2CC652AE5DC94F920415106 (InternalEnumerator_1_t585F7CDD6486AAF608BA5B8302002A08AA57E547 * __this, const RuntimeMethod* method)
+{
+	((  void (*) (InternalEnumerator_1_t585F7CDD6486AAF608BA5B8302002A08AA57E547 *, const RuntimeMethod*))InternalEnumerator_1_System_Collections_IEnumerator_Reset_mF5516AE1432CF21CB2CC652AE5DC94F920415106_gshared)(__this, method);
+}
+// System.Object System.Array/InternalEnumerator`1<Unity.Notifications.iOS.iOSNotificationWithUserInfo>::System.Collections.IEnumerator.get_Current()
+inline RuntimeObject * InternalEnumerator_1_System_Collections_IEnumerator_get_Current_m41BB5DF7805EFB687065EF0DFCB3E50250BBFE46 (InternalEnumerator_1_t585F7CDD6486AAF608BA5B8302002A08AA57E547 * __this, const RuntimeMethod* method)
+{
+	return ((  RuntimeObject * (*) (InternalEnumerator_1_t585F7CDD6486AAF608BA5B8302002A08AA57E547 *, const RuntimeMethod*))InternalEnumerator_1_System_Collections_IEnumerator_get_Current_m41BB5DF7805EFB687065EF0DFCB3E50250BBFE46_gshared)(__this, method);
 }
 // System.Void System.Array/InternalEnumerator`1<System.ComponentModel.AttributeCollection/AttributeEntry>::.ctor(System.Array)
 inline void InternalEnumerator_1__ctor_m2BD70FA5F91F537626741904F90EC535D69D8D9D (InternalEnumerator_1_t1C06FB804D0348F2D913FFB95C91757F938AEEAF * __this, RuntimeArray * ___array0, const RuntimeMethod* method)
@@ -30410,6 +30845,177 @@ IL2CPP_EXTERN_C  RuntimeObject * InternalEnumerator_1_System_Collections_IEnumer
 	InternalEnumerator_1_t559C659DB8782FA7ED5921D7350D888127DAD6C5 * _thisAdjusted = reinterpret_cast<InternalEnumerator_1_t559C659DB8782FA7ED5921D7350D888127DAD6C5 *>(__this + _offset);
 	RuntimeObject * _returnValue;
 	_returnValue = InternalEnumerator_1_System_Collections_IEnumerator_get_Current_m115B1320297BFA34CEC3CC79AF64F3E8D32A57D5(_thisAdjusted, method);
+	return _returnValue;
+}
+#ifdef __clang__
+#pragma clang diagnostic pop
+#endif
+#ifdef __clang__
+#pragma clang diagnostic push
+#pragma clang diagnostic ignored "-Winvalid-offsetof"
+#pragma clang diagnostic ignored "-Wunused-variable"
+#endif
+// System.Void System.Array/InternalEnumerator`1<Unity.Notifications.iOS.iOSNotificationWithUserInfo>::.ctor(System.Array)
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void InternalEnumerator_1__ctor_m240C8A572DC5AEEB699C4D7D597D9DA952604ED5_gshared (InternalEnumerator_1_t585F7CDD6486AAF608BA5B8302002A08AA57E547 * __this, RuntimeArray * ___array0, const RuntimeMethod* method)
+{
+	{
+		RuntimeArray * L_0 = ___array0;
+		__this->set_array_0(L_0);
+		__this->set_idx_1(((int32_t)-2));
+		return;
+	}
+}
+IL2CPP_EXTERN_C  void InternalEnumerator_1__ctor_m240C8A572DC5AEEB699C4D7D597D9DA952604ED5_AdjustorThunk (RuntimeObject * __this, RuntimeArray * ___array0, const RuntimeMethod* method)
+{
+	int32_t _offset = 1;
+	InternalEnumerator_1_t585F7CDD6486AAF608BA5B8302002A08AA57E547 * _thisAdjusted = reinterpret_cast<InternalEnumerator_1_t585F7CDD6486AAF608BA5B8302002A08AA57E547 *>(__this + _offset);
+	InternalEnumerator_1__ctor_m240C8A572DC5AEEB699C4D7D597D9DA952604ED5(_thisAdjusted, ___array0, method);
+}
+// System.Void System.Array/InternalEnumerator`1<Unity.Notifications.iOS.iOSNotificationWithUserInfo>::Dispose()
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void InternalEnumerator_1_Dispose_m3260A8F6BFE7A87B33639CA7B9B7190362DC59D8_gshared (InternalEnumerator_1_t585F7CDD6486AAF608BA5B8302002A08AA57E547 * __this, const RuntimeMethod* method)
+{
+	{
+		return;
+	}
+}
+IL2CPP_EXTERN_C  void InternalEnumerator_1_Dispose_m3260A8F6BFE7A87B33639CA7B9B7190362DC59D8_AdjustorThunk (RuntimeObject * __this, const RuntimeMethod* method)
+{
+	int32_t _offset = 1;
+	InternalEnumerator_1_t585F7CDD6486AAF608BA5B8302002A08AA57E547 * _thisAdjusted = reinterpret_cast<InternalEnumerator_1_t585F7CDD6486AAF608BA5B8302002A08AA57E547 *>(__this + _offset);
+	InternalEnumerator_1_Dispose_m3260A8F6BFE7A87B33639CA7B9B7190362DC59D8(_thisAdjusted, method);
+}
+// System.Boolean System.Array/InternalEnumerator`1<Unity.Notifications.iOS.iOSNotificationWithUserInfo>::MoveNext()
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool InternalEnumerator_1_MoveNext_mC34FE62A1BCC1136A8B18F1CFD1E46A8965A9EF8_gshared (InternalEnumerator_1_t585F7CDD6486AAF608BA5B8302002A08AA57E547 * __this, const RuntimeMethod* method)
+{
+	int32_t V_0 = 0;
+	{
+		int32_t L_0 = (int32_t)__this->get_idx_1();
+		if ((!(((uint32_t)L_0) == ((uint32_t)((int32_t)-2)))))
+		{
+			goto IL_001b;
+		}
+	}
+	{
+		RuntimeArray * L_1 = (RuntimeArray *)__this->get_array_0();
+		NullCheck((RuntimeArray *)L_1);
+		int32_t L_2;
+		L_2 = Array_get_Length_m12B3E61F1BF9880AB252640D69269B49665C0A10((RuntimeArray *)L_1, /*hidden argument*/NULL);
+		__this->set_idx_1(L_2);
+	}
+
+IL_001b:
+	{
+		int32_t L_3 = (int32_t)__this->get_idx_1();
+		if ((((int32_t)L_3) == ((int32_t)(-1))))
+		{
+			goto IL_003c;
+		}
+	}
+	{
+		int32_t L_4 = (int32_t)__this->get_idx_1();
+		V_0 = (int32_t)((int32_t)il2cpp_codegen_subtract((int32_t)L_4, (int32_t)1));
+		int32_t L_5 = V_0;
+		__this->set_idx_1(L_5);
+		int32_t L_6 = V_0;
+		return (bool)((((int32_t)((((int32_t)L_6) == ((int32_t)(-1)))? 1 : 0)) == ((int32_t)0))? 1 : 0);
+	}
+
+IL_003c:
+	{
+		return (bool)0;
+	}
+}
+IL2CPP_EXTERN_C  bool InternalEnumerator_1_MoveNext_mC34FE62A1BCC1136A8B18F1CFD1E46A8965A9EF8_AdjustorThunk (RuntimeObject * __this, const RuntimeMethod* method)
+{
+	int32_t _offset = 1;
+	InternalEnumerator_1_t585F7CDD6486AAF608BA5B8302002A08AA57E547 * _thisAdjusted = reinterpret_cast<InternalEnumerator_1_t585F7CDD6486AAF608BA5B8302002A08AA57E547 *>(__this + _offset);
+	bool _returnValue;
+	_returnValue = InternalEnumerator_1_MoveNext_mC34FE62A1BCC1136A8B18F1CFD1E46A8965A9EF8(_thisAdjusted, method);
+	return _returnValue;
+}
+// T System.Array/InternalEnumerator`1<Unity.Notifications.iOS.iOSNotificationWithUserInfo>::get_Current()
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR iOSNotificationWithUserInfo_t19F429915AFFB4E6A1CF092FA0F7041BF385B4E4  InternalEnumerator_1_get_Current_mCBF24378A1043C03B40A1B327117284E840591C4_gshared (InternalEnumerator_1_t585F7CDD6486AAF608BA5B8302002A08AA57E547 * __this, const RuntimeMethod* method)
+{
+	{
+		int32_t L_0 = (int32_t)__this->get_idx_1();
+		if ((!(((uint32_t)L_0) == ((uint32_t)((int32_t)-2)))))
+		{
+			goto IL_0015;
+		}
+	}
+	{
+		InvalidOperationException_t10D3EE59AD28EC641ACEE05BCA4271A527E5ECAB * L_1 = (InvalidOperationException_t10D3EE59AD28EC641ACEE05BCA4271A527E5ECAB *)il2cpp_codegen_object_new(((RuntimeClass*)il2cpp_codegen_initialize_runtime_metadata_inline((uintptr_t*)&InvalidOperationException_t10D3EE59AD28EC641ACEE05BCA4271A527E5ECAB_il2cpp_TypeInfo_var)));
+		InvalidOperationException__ctor_mC012CE552988309733C896F3FEA8249171E4402E(L_1, (String_t*)((String_t*)il2cpp_codegen_initialize_runtime_metadata_inline((uintptr_t*)&_stringLiteral7E7A07FECA0FF43839D67A9F7828EE56182CC9F6)), /*hidden argument*/NULL);
+		IL2CPP_RAISE_MANAGED_EXCEPTION(L_1, ((RuntimeMethod*)il2cpp_codegen_initialize_runtime_metadata_inline((uintptr_t*)&InternalEnumerator_1_get_Current_mCBF24378A1043C03B40A1B327117284E840591C4_RuntimeMethod_var)));
+	}
+
+IL_0015:
+	{
+		int32_t L_2 = (int32_t)__this->get_idx_1();
+		if ((!(((uint32_t)L_2) == ((uint32_t)(-1)))))
+		{
+			goto IL_0029;
+		}
+	}
+	{
+		InvalidOperationException_t10D3EE59AD28EC641ACEE05BCA4271A527E5ECAB * L_3 = (InvalidOperationException_t10D3EE59AD28EC641ACEE05BCA4271A527E5ECAB *)il2cpp_codegen_object_new(((RuntimeClass*)il2cpp_codegen_initialize_runtime_metadata_inline((uintptr_t*)&InvalidOperationException_t10D3EE59AD28EC641ACEE05BCA4271A527E5ECAB_il2cpp_TypeInfo_var)));
+		InvalidOperationException__ctor_mC012CE552988309733C896F3FEA8249171E4402E(L_3, (String_t*)((String_t*)il2cpp_codegen_initialize_runtime_metadata_inline((uintptr_t*)&_stringLiteralE8963BEA051E9F5E3F02A780ED8AB1AE95782FAF)), /*hidden argument*/NULL);
+		IL2CPP_RAISE_MANAGED_EXCEPTION(L_3, ((RuntimeMethod*)il2cpp_codegen_initialize_runtime_metadata_inline((uintptr_t*)&InternalEnumerator_1_get_Current_mCBF24378A1043C03B40A1B327117284E840591C4_RuntimeMethod_var)));
+	}
+
+IL_0029:
+	{
+		RuntimeArray * L_4 = (RuntimeArray *)__this->get_array_0();
+		RuntimeArray * L_5 = (RuntimeArray *)__this->get_array_0();
+		NullCheck((RuntimeArray *)L_5);
+		int32_t L_6;
+		L_6 = Array_get_Length_m12B3E61F1BF9880AB252640D69269B49665C0A10((RuntimeArray *)L_5, /*hidden argument*/NULL);
+		int32_t L_7 = (int32_t)__this->get_idx_1();
+		NullCheck((RuntimeArray *)L_4);
+		iOSNotificationWithUserInfo_t19F429915AFFB4E6A1CF092FA0F7041BF385B4E4  L_8;
+		L_8 = ((  iOSNotificationWithUserInfo_t19F429915AFFB4E6A1CF092FA0F7041BF385B4E4  (*) (RuntimeArray *, int32_t, const RuntimeMethod*))IL2CPP_RGCTX_METHOD_INFO(InitializedTypeInfo(method->klass)->rgctx_data, 0)->methodPointer)((RuntimeArray *)L_4, (int32_t)((int32_t)il2cpp_codegen_subtract((int32_t)((int32_t)il2cpp_codegen_subtract((int32_t)L_6, (int32_t)1)), (int32_t)L_7)), /*hidden argument*/IL2CPP_RGCTX_METHOD_INFO(InitializedTypeInfo(method->klass)->rgctx_data, 0));
+		return (iOSNotificationWithUserInfo_t19F429915AFFB4E6A1CF092FA0F7041BF385B4E4 )L_8;
+	}
+}
+IL2CPP_EXTERN_C  iOSNotificationWithUserInfo_t19F429915AFFB4E6A1CF092FA0F7041BF385B4E4  InternalEnumerator_1_get_Current_mCBF24378A1043C03B40A1B327117284E840591C4_AdjustorThunk (RuntimeObject * __this, const RuntimeMethod* method)
+{
+	int32_t _offset = 1;
+	InternalEnumerator_1_t585F7CDD6486AAF608BA5B8302002A08AA57E547 * _thisAdjusted = reinterpret_cast<InternalEnumerator_1_t585F7CDD6486AAF608BA5B8302002A08AA57E547 *>(__this + _offset);
+	iOSNotificationWithUserInfo_t19F429915AFFB4E6A1CF092FA0F7041BF385B4E4  _returnValue;
+	_returnValue = InternalEnumerator_1_get_Current_mCBF24378A1043C03B40A1B327117284E840591C4(_thisAdjusted, method);
+	return _returnValue;
+}
+// System.Void System.Array/InternalEnumerator`1<Unity.Notifications.iOS.iOSNotificationWithUserInfo>::System.Collections.IEnumerator.Reset()
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void InternalEnumerator_1_System_Collections_IEnumerator_Reset_mF5516AE1432CF21CB2CC652AE5DC94F920415106_gshared (InternalEnumerator_1_t585F7CDD6486AAF608BA5B8302002A08AA57E547 * __this, const RuntimeMethod* method)
+{
+	{
+		__this->set_idx_1(((int32_t)-2));
+		return;
+	}
+}
+IL2CPP_EXTERN_C  void InternalEnumerator_1_System_Collections_IEnumerator_Reset_mF5516AE1432CF21CB2CC652AE5DC94F920415106_AdjustorThunk (RuntimeObject * __this, const RuntimeMethod* method)
+{
+	int32_t _offset = 1;
+	InternalEnumerator_1_t585F7CDD6486AAF608BA5B8302002A08AA57E547 * _thisAdjusted = reinterpret_cast<InternalEnumerator_1_t585F7CDD6486AAF608BA5B8302002A08AA57E547 *>(__this + _offset);
+	InternalEnumerator_1_System_Collections_IEnumerator_Reset_mF5516AE1432CF21CB2CC652AE5DC94F920415106(_thisAdjusted, method);
+}
+// System.Object System.Array/InternalEnumerator`1<Unity.Notifications.iOS.iOSNotificationWithUserInfo>::System.Collections.IEnumerator.get_Current()
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR RuntimeObject * InternalEnumerator_1_System_Collections_IEnumerator_get_Current_m41BB5DF7805EFB687065EF0DFCB3E50250BBFE46_gshared (InternalEnumerator_1_t585F7CDD6486AAF608BA5B8302002A08AA57E547 * __this, const RuntimeMethod* method)
+{
+	{
+		iOSNotificationWithUserInfo_t19F429915AFFB4E6A1CF092FA0F7041BF385B4E4  L_0;
+		L_0 = InternalEnumerator_1_get_Current_mCBF24378A1043C03B40A1B327117284E840591C4((InternalEnumerator_1_t585F7CDD6486AAF608BA5B8302002A08AA57E547 *)(InternalEnumerator_1_t585F7CDD6486AAF608BA5B8302002A08AA57E547 *)__this, /*hidden argument*/IL2CPP_RGCTX_METHOD_INFO(InitializedTypeInfo(method->klass)->rgctx_data, 1));
+		iOSNotificationWithUserInfo_t19F429915AFFB4E6A1CF092FA0F7041BF385B4E4  L_1 = (iOSNotificationWithUserInfo_t19F429915AFFB4E6A1CF092FA0F7041BF385B4E4 )L_0;
+		RuntimeObject * L_2 = Box(IL2CPP_RGCTX_DATA(InitializedTypeInfo(method->klass)->rgctx_data, 2), &L_1);
+		return (RuntimeObject *)L_2;
+	}
+}
+IL2CPP_EXTERN_C  RuntimeObject * InternalEnumerator_1_System_Collections_IEnumerator_get_Current_m41BB5DF7805EFB687065EF0DFCB3E50250BBFE46_AdjustorThunk (RuntimeObject * __this, const RuntimeMethod* method)
+{
+	int32_t _offset = 1;
+	InternalEnumerator_1_t585F7CDD6486AAF608BA5B8302002A08AA57E547 * _thisAdjusted = reinterpret_cast<InternalEnumerator_1_t585F7CDD6486AAF608BA5B8302002A08AA57E547 *>(__this + _offset);
+	RuntimeObject * _returnValue;
+	_returnValue = InternalEnumerator_1_System_Collections_IEnumerator_get_Current_m41BB5DF7805EFB687065EF0DFCB3E50250BBFE46(_thisAdjusted, method);
 	return _returnValue;
 }
 #ifdef __clang__

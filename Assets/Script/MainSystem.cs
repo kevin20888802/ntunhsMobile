@@ -7,7 +7,12 @@ using System.Collections.Generic;
 using System.Data;
 using System.Net.Http;
 using UnityEngine;
+#if UNITY_ANDROID
 using Unity.Notifications.Android;
+#endif
+#if UNITY_IPHONE
+using Unity.Notifications.iOS;
+#endif
 
 public class MainSystem : MonoBehaviour
 {
@@ -37,15 +42,20 @@ public class MainSystem : MonoBehaviour
     }
     private void Start()
     {
+#if UNITY_ANDROID
         login_reset = login_reset_duration;
         var c = new AndroidNotificationChannel()
         {
             Id = notifyChannelID,
-            Name = "Default Channel",
+            Name = "上課通知",
             Importance = Importance.High,
-            Description = "Generic notifications"
+            Description = "上課通知"
         };
         AndroidNotificationCenter.RegisterNotificationChannel(c);
+#endif
+#if UNITY_IPHONE
+        StartCoroutine(iOSRequestAuthorization());
+#endif
     }
     private void FixedUpdate()
     {
@@ -64,7 +74,7 @@ public class MainSystem : MonoBehaviour
             }
         }
     }
-    #region NTUNHS Cosim
+#region NTUNHS Cosim
     /// <summary>
     /// 取得公告原始資料。
     /// </summary>
@@ -312,7 +322,7 @@ public class MainSystem : MonoBehaviour
                 $scope.Category = [{ 'name': '跨校', 'value': 1, 'IsChecked': false }, { 'name': '跨域課程', 'value': 2, 'IsChecked': false }, { 'name': '全英語授課', 'value': 3, 'IsChecked': false }, { 'name': '同步遠距教學', 'value': 4, 'IsChecked': false }, { 'name': '非同步遠距教學', 'value': 5, 'IsChecked': false }];
                 $scope.Columns = [{ 'name': "學期", 'IsChecked': true, 'value': 'Sem' }, { 'name': "系所名稱", 'IsChecked': true, 'value': 'Faculty_Name' }, { 'name': "年級", 'IsChecked': true, 'value': 'Grad' }, { 'name': "課程代碼(14碼)", 'IsChecked': true, 'value': 'Course_Id' } ,{ 'name': "上課班組", 'IsChecked': true, 'value': 'Course_Class' }, { 'name': "課程名稱", 'IsChecked': true, 'value': 'Course_Name' }, { 'name': "授課老師", 'IsChecked': true, 'value': 'Teacher' }, { 'name': "上課人數/限制人數", 'IsChecked': true, 'value': 'Course_People,Limit_People' }, { 'name': "學分數", 'IsChecked': true, 'value': 'Credits' }, { 'name': "課別", 'IsChecked': true, 'value': 'Course_Type' }, { 'name': "地點", 'IsChecked': true, 'value': 'Course_Place' }, { 'name': "星期", 'IsChecked': true, 'value': 'Course_Day' }, { 'name': "節次", 'IsChecked': true, 'value': 'Course_Time' }, { 'name': "備註", 'IsChecked': true, 'value': 'Course_Other' }, { 'name': "教學計劃", 'IsChecked': true, 'value': 'Class_Plan' }];
                 $scope.Sem = [];
-             */
+            */
             string _queryStr = "";
             foreach (KeyValuePair<string,string> item in i_query)
             {
@@ -349,19 +359,73 @@ public class MainSystem : MonoBehaviour
             return null;
         }
     }
-    #endregion
+#endregion
 
-    #region Unity輔助相關功能
+#region Unity輔助相關功能
     public void SetNotify(string i_text, DateTime i_time)
     {
+#if UNITY_ANDROID
         var notification = new AndroidNotification()
         {
             Title = "NTUNHS Mobile",
             Text = i_text,
             FireTime = i_time
         };
-        AndroidNotificationCenter.SendNotification(notification, "channel_id");
+        AndroidNotificationCenter.SendNotification(notification, notifyChannelID);
+#endif
+
+#if UNITY_IPHONE
+        
+        var timeTrigger = new iOSNotificationCalendarTrigger()
+        {
+            Year = i_time.Year,
+            Month = i_time.Month,
+            Day = i_time.Day,
+            Hour = i_time.Hour,
+            Minute = i_time.Minute,
+            Second = i_time.Second,
+            Repeats = false
+        };
+
+        var notification = new iOSNotification()
+        {
+          // You can optionally specify a custom identifier which can later be 
+          // used to cancel the notification, if you don't set one, a unique 
+          // string will be generated automatically.
+          Identifier = notifyChannelID,
+          Title = "NTUNHS Mobile",
+          Body = i_text,
+          Subtitle = i_text,
+          ShowInForeground = true,
+          ForegroundPresentationOption = (PresentationOption.Alert | PresentationOption.Sound),
+          CategoryIdentifier = "category_a",
+          ThreadIdentifier = notifyChannelID + "_thread1",
+          Trigger = timeTrigger,
+        };
+
+        iOSNotificationCenter.ScheduleNotification(notification);
+#endif
     }
+#if UNITY_IPHONE
+    IEnumerator iOSRequestAuthorization()
+    {
+        using (var req = new AuthorizationRequest(AuthorizationOption.Alert | AuthorizationOption.Badge, true))
+        {
+            while (!req.IsFinished)
+            {
+                yield return null;
+            };
+
+            string res = "\n RequestAuthorization: \n";
+            res += "\n finished: " + req.IsFinished;
+            res += "\n granted :  " + req.Granted;
+            res += "\n error:  " + req.Error;
+            res += "\n deviceToken:  " + req.DeviceToken;
+            Debug.Log(res);
+        }
+    }
+#endif
+
     public void SetLayer(Transform i_obj, int i_layerId)
     {
         i_obj.gameObject.layer = i_layerId;
@@ -405,5 +469,5 @@ public class MainSystem : MonoBehaviour
             return null;
         }
     }
-    #endregion
+#endregion
 }

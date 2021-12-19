@@ -3,57 +3,45 @@
     "m_SelectedPackage": {
         "deviceId": "LMG900EMWe8e05d79",
         "name": "com.ntunhs.ntunhsMobile",
-        "processId": 14025,
+        "processId": 29494,
         "exited": false
     },
     "m_SelectedPriority": 0,
     "m_KnownPackagesForSerialization": [
         {
             "deviceId": "LMG900EMWe8e05d79",
-            "name": "com.lge.clock",
-            "processId": 21432,
-            "exited": true
-        },
-        {
-            "deviceId": "LMG900EMWe8e05d79",
-            "name": "com.ntunhs.ntunhsMobile",
-            "processId": 22303,
-            "exited": true
-        },
-        {
-            "deviceId": "LMG900EMWe8e05d79",
-            "name": "com.lge.clock",
-            "processId": 22865,
-            "exited": true
-        },
-        {
-            "deviceId": "LMG900EMWe8e05d79",
-            "name": "com.ntunhs.ntunhsMobile",
-            "processId": 24147,
-            "exited": true
-        },
-        {
-            "deviceId": "LMG900EMWe8e05d79",
-            "name": "com.ntunhs.ntunhsMobile",
-            "processId": 30641,
-            "exited": true
-        },
-        {
-            "deviceId": "LMG900EMWe8e05d79",
-            "name": "com.ntunhs.ntunhsMobile",
-            "processId": 30917,
-            "exited": false
-        },
-        {
-            "deviceId": "LMG900EMWe8e05d79",
             "name": "com.ntunhs.ntunhsMobile",
             "processId": 11365,
-            "exited": false
+            "exited": true
         },
         {
             "deviceId": "LMG900EMWe8e05d79",
             "name": "com.ntunhs.ntunhsMobile",
             "processId": 14025,
+            "exited": true
+        },
+        {
+            "deviceId": "LMG900EMWe8e05d79",
+            "name": "com.ntunhs.ntunhsMobile",
+            "processId": 31962,
+            "exited": true
+        },
+        {
+            "deviceId": "LMG900EMWe8e05d79",
+            "name": "com.ntunhs.ntunhsMobile",
+            "processId": 32618,
+            "exited": true
+        },
+        {
+            "deviceId": "LMG900EMWe8e05d79",
+            "name": "com.ntunhs.ntunhsMobile",
+            "processId": 23439,
+            "exited": true
+        },
+        {
+            "deviceId": "LMG900EMWe8e05d79",
+            "name": "com.ntunhs.ntunhsMobile",
+            "processId": 29494,
             "exited": false
         }
     ],

@@ -56,13 +56,13 @@
     <Analyzer Include="C:\Program Files (x86)\Microsoft Visual Studio Tools for Unity\16.0\Analyzers\Microsoft.Unity.Analyzers.dll" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Library\PackageCache\com.unity.mobile.notifications@1.4.2\Runtime\Android\AndroidNotificationExtensions.cs" />
+    <Compile Include="Library\PackageCache\com.unity.mobile.notifications@1.4.2\Runtime\Android\AndroidNotificationCallback.cs" />
+    <Compile Include="Library\PackageCache\com.unity.mobile.notifications@1.4.2\Runtime\Android\AndroidReceivedNotificationMainThreadDispatcher.cs" />
     <Compile Include="Library\PackageCache\com.unity.mobile.notifications@1.4.2\Runtime\Android\AndroidNotificationCenter.cs" />
     <Compile Include="Library\PackageCache\com.unity.mobile.notifications@1.4.2\Runtime\Android\AndroidNotificationChannel.cs" />
     <Compile Include="Library\PackageCache\com.unity.mobile.notifications@1.4.2\Runtime\Android\AndroidNotification.cs" />
+    <Compile Include="Library\PackageCache\com.unity.mobile.notifications@1.4.2\Runtime\Android\AndroidNotificationExtensions.cs" />
     <Compile Include="Library\PackageCache\com.unity.mobile.notifications@1.4.2\Runtime\Android\AndroidNotificationIntentData.cs" />
-    <Compile Include="Library\PackageCache\com.unity.mobile.notifications@1.4.2\Runtime\Android\AndroidNotificationCallback.cs" />
-    <Compile Include="Library\PackageCache\com.unity.mobile.notifications@1.4.2\Runtime\Android\AndroidReceivedNotificationMainThreadDispatcher.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Library\PackageCache\com.unity.mobile.notifications@1.4.2\Runtime\Android\Unity.Notifications.Android.asmdef" />

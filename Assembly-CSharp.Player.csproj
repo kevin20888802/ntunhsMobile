@@ -59,11 +59,13 @@
     <Compile Include="Assets\Script\UI_Elements\UI_AutoResizeText.cs" />
     <Compile Include="Assets\Script\UI_Elements\UI_CourseSearchCell.cs" />
     <Compile Include="Assets\Script\Menu_Schedule.cs" />
+    <Compile Include="Assets\Script\DataType\CourseWork.cs" />
     <Compile Include="Assets\Script\Menu_Work.cs" />
     <Compile Include="Assets\Script\UI_Elements\MsgInputBox.cs" />
     <Compile Include="Assets\Script\UI_Elements\UI_Table_Text_Cell.cs" />
     <Compile Include="Assets\Script\Menu_Announce.cs" />
     <Compile Include="Assets\Script\Menu_History_Scores.cs" />
+    <Compile Include="Assets\Script\UI_Elements\UI_CourseWork_Cell.cs" />
     <Compile Include="Assets\Script\Menu_LearnMap.cs" />
     <Compile Include="Assets\Script\Menu_CourseSearch_Result.cs" />
     <Compile Include="Assets\Script\UI_Elements\MsgBox.cs" />
@@ -82,8 +84,6 @@
     <Compile Include="Assets\Script\UI_Elements\MsgBoxBase.cs" />
     <Compile Include="Assets\Script\Menu_Scores.cs" />
     <Compile Include="Assets\Script\UI_Elements\UI_ArticleBox.cs" />
-    <Compile Include="Assets\Script\UI_Elements\UI_CourseWork_Cell.cs" />
-    <Compile Include="Assets\Script\DataType\CourseWork.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets\Plugin\Newtonsoft.Json AOT\Newtonsoft.Json.xml" />
@@ -281,6 +281,9 @@
     <Reference Include="Unity.VSCode.Editor">
       <HintPath>Library\ScriptAssemblies\Unity.VSCode.Editor.dll</HintPath>
     </Reference>
+    <Reference Include="Unity.Notifications">
+      <HintPath>Library\ScriptAssemblies\Unity.Notifications.dll</HintPath>
+    </Reference>
     <Reference Include="Unity.TextMeshPro.Editor">
       <HintPath>Library\ScriptAssemblies\Unity.TextMeshPro.Editor.dll</HintPath>
     </Reference>
@@ -298,9 +301,6 @@
     </Reference>
     <Reference Include="Unity.Rider.Editor">
       <HintPath>Library\ScriptAssemblies\Unity.Rider.Editor.dll</HintPath>
-    </Reference>
-    <Reference Include="Unity.Notifications">
-      <HintPath>Library\ScriptAssemblies\Unity.Notifications.dll</HintPath>
     </Reference>
     <Reference Include="Unity.Notifications.iOS">
       <HintPath>Library\ScriptAssemblies\Unity.Notifications.iOS.dll</HintPath>
@@ -659,13 +659,13 @@
       <Project>{BFF0A82F-0E3F-BAC5-3145-8C49875E1521}</Project>
       <Name>Unity.TextMeshPro</Name>
     </ProjectReference>
-    <ProjectReference Include="UnityEngine.UI.csproj">
-      <Project>{821544B8-0A01-B641-F334-0B488ECE0D14}</Project>
-      <Name>UnityEngine.UI</Name>
-    </ProjectReference>
     <ProjectReference Include="Unity.Notifications.Android.csproj">
       <Project>{20E659BD-6780-0A1F-6D8A-24AD16E40D62}</Project>
       <Name>Unity.Notifications.Android</Name>
+    </ProjectReference>
+    <ProjectReference Include="UnityEngine.UI.csproj">
+      <Project>{821544B8-0A01-B641-F334-0B488ECE0D14}</Project>
+      <Name>UnityEngine.UI</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

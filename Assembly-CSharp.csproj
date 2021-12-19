@@ -59,11 +59,13 @@
     <Compile Include="Assets\Script\UI_Elements\UI_AutoResizeText.cs" />
     <Compile Include="Assets\Script\UI_Elements\UI_CourseSearchCell.cs" />
     <Compile Include="Assets\Script\Menu_Schedule.cs" />
+    <Compile Include="Assets\Script\DataType\CourseWork.cs" />
     <Compile Include="Assets\Script\Menu_Work.cs" />
     <Compile Include="Assets\Script\UI_Elements\MsgInputBox.cs" />
     <Compile Include="Assets\Script\UI_Elements\UI_Table_Text_Cell.cs" />
     <Compile Include="Assets\Script\Menu_Announce.cs" />
     <Compile Include="Assets\Script\Menu_History_Scores.cs" />
+    <Compile Include="Assets\Script\UI_Elements\UI_CourseWork_Cell.cs" />
     <Compile Include="Assets\Script\Menu_LearnMap.cs" />
     <Compile Include="Assets\Script\Menu_CourseSearch_Result.cs" />
     <Compile Include="Assets\Script\UI_Elements\MsgBox.cs" />
@@ -82,8 +84,6 @@
     <Compile Include="Assets\Script\UI_Elements\MsgBoxBase.cs" />
     <Compile Include="Assets\Script\Menu_Scores.cs" />
     <Compile Include="Assets\Script\UI_Elements\UI_ArticleBox.cs" />
-    <Compile Include="Assets\Script\UI_Elements\UI_CourseWork_Cell.cs" />
-    <Compile Include="Assets\Script\DataType\CourseWork.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets\Plugin\Newtonsoft.Json AOT\Newtonsoft.Json.xml" />
@@ -665,6 +665,10 @@
       <Project>{F718F57C-0478-BC63-05FB-FF62057E743A}</Project>
       <Name>Unity.VSCode.Editor</Name>
     </ProjectReference>
+    <ProjectReference Include="Unity.Notifications.csproj">
+      <Project>{90B85211-0D22-7FFD-6A88-3EB0AF76DAE6}</Project>
+      <Name>Unity.Notifications</Name>
+    </ProjectReference>
     <ProjectReference Include="Unity.TextMeshPro.Editor.csproj">
       <Project>{07BFBBCB-7FD7-DDBC-B1A4-AF95877F19AD}</Project>
       <Name>Unity.TextMeshPro.Editor</Name>
@@ -693,21 +697,17 @@
       <Project>{D2C4564F-FDBB-5312-D93C-144F9D3509F8}</Project>
       <Name>Unity.Rider.Editor</Name>
     </ProjectReference>
+    <ProjectReference Include="Unity.Notifications.Android.csproj">
+      <Project>{20E659BD-6780-0A1F-6D8A-24AD16E40D62}</Project>
+      <Name>Unity.Notifications.Android</Name>
+    </ProjectReference>
     <ProjectReference Include="UnityEngine.UI.csproj">
       <Project>{821544B8-0A01-B641-F334-0B488ECE0D14}</Project>
       <Name>UnityEngine.UI</Name>
     </ProjectReference>
-    <ProjectReference Include="Unity.Notifications.csproj">
-      <Project>{90B85211-0D22-7FFD-6A88-3EB0AF76DAE6}</Project>
-      <Name>Unity.Notifications</Name>
-    </ProjectReference>
     <ProjectReference Include="Unity.Notifications.iOS.csproj">
       <Project>{4B26D9E2-03DC-53A4-E3C5-9D74A553F0CF}</Project>
       <Name>Unity.Notifications.iOS</Name>
-    </ProjectReference>
-    <ProjectReference Include="Unity.Notifications.Android.csproj">
-      <Project>{20E659BD-6780-0A1F-6D8A-24AD16E40D62}</Project>
-      <Name>Unity.Notifications.Android</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

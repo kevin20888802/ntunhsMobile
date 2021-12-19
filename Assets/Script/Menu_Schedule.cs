@@ -2,6 +2,12 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
+#if UNITY_ANDROID
+using Unity.Notifications.Android;
+#endif
+#if UNITY_IPHONE
+using Unity.Notifications.iOS;
+#endif
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -13,6 +19,8 @@ public class Menu_Schedule : UI_Menu
     public UI_Table_Text ui_detail_table;
     public GameObject ui_detail;
     public Schedule TheSchedule;
+    public Button NotifyBtn;
+    public Dropdown NotifyTimeDropdown;
     public Course SelectedCourse;
 
     public override IEnumerator EnterMenu()
@@ -25,12 +33,17 @@ public class Menu_Schedule : UI_Menu
         {
             ui_detail.SetActive(false);
             Refresh();
+            ResetAllScheduleNotifys();
         }
         else
         {
             MenuManager.LogOut();
         }
         MainSystem.Loading = false;
+    }
+    private void Update()
+    {
+        
     }
     public void Refresh()
     {
@@ -95,6 +108,8 @@ public class Menu_Schedule : UI_Menu
 
     public void ShowDetail(Course i_course)
     {
+        SelectedCourse = i_course;
+        NotifyDetailUpdate();
         ui_detail.SetActive(true);
 
         string[,] _tableData = new string[7, 2];
@@ -137,19 +152,145 @@ public class Menu_Schedule : UI_Menu
         }
 
         ui_detail_table.MergeCells(new Vector2(0, 0), new Vector2(0, 1));
-
-        SelectedCourse = i_course;
     }
 
     public void SetNotify()
     {
-        DateTime notifyTime = GetNextWeekday(DateTime.Now,(DayOfWeek)Convert.ToInt32(SelectedCourse.Day));
-        string[] _tmp = TheSchedule.Period[Convert.ToInt32(SelectedCourse.Period.Split('~')[0])].Split('~')[0].Split(':');
-        TimeSpan course_period = (new TimeSpan(Convert.ToInt32(_tmp[0]), Convert.ToInt32(_tmp[1]), 0)).Subtract(new TimeSpan(0,30,0));
-        notifyTime = notifyTime.Date + course_period; 
-        MainSystem.SetNotify(SelectedCourse.Name + "\n上課時間:" + SelectedCourse.Time, notifyTime);
-        MsgBox.Msg("已設定提醒", "已設定提醒\n提醒時間:" + notifyTime.ToString());
+        DateTime notifyTime = GetNotifyTime(SelectedCourse);
+        string _notifyName = SelectedCourse.FullCode + SelectedCourse.Name + "_notify";
+        int _notifyEnabled = 0;
+        if (!PlayerPrefs.HasKey(_notifyName))
+        {
+            PlayerPrefs.SetInt(_notifyName, 0);
+        }
+        _notifyEnabled = PlayerPrefs.GetInt(_notifyName);
+        if (_notifyEnabled == 0)
+        {
+            MsgBox.Msg("已設定提醒", "已設定提醒\n提醒時間:" + notifyTime.ToString());
+            PlayerPrefs.SetInt(_notifyName, 1);
+            PlayerPrefs.SetInt(_notifyName + "_Time", Convert.ToInt32(NotifyTimeDropdown.options[NotifyTimeDropdown.value].text));
+        }
+        else
+        {
+            MsgBox.Msg("已取消提醒", "已取消提醒");
+            PlayerPrefs.SetInt(_notifyName, 0);
+        }
+        NotifyDetailUpdate();
+        ResetAllScheduleNotifys();
     }
+    public void TimeDropdownUpdated()
+    {
+        if (ui_detail.activeSelf == true)
+        {
+            string _notifyName = SelectedCourse.FullCode + SelectedCourse.Name + "_notify";
+            PlayerPrefs.SetInt(_notifyName + "_Time", Convert.ToInt32(NotifyTimeDropdown.options[NotifyTimeDropdown.value].text));
+            TurnOffNotify();
+        }
+    }
+
+    public void TurnOffNotify()
+    {
+        string _notifyName = SelectedCourse.FullCode + SelectedCourse.Name + "_notify";
+        int _notifyEnabled = PlayerPrefs.GetInt(SelectedCourse.FullCode + SelectedCourse.Name + "_notify");
+        if (_notifyEnabled == 1)
+        {
+            PlayerPrefs.SetInt(_notifyName, 0);
+            MsgBox.Msg("已取消提醒", "已取消提醒，請重新設定。");
+            NotifyDetailUpdate();
+        }
+    }
+    public void NotifyDetailUpdate()
+    {
+        string _notifyName = SelectedCourse.FullCode + SelectedCourse.Name + "_notify";
+        int _notifyEnabled = PlayerPrefs.GetInt(SelectedCourse.FullCode + SelectedCourse.Name + "_notify");
+        if (_notifyEnabled == 0)
+        {
+            NotifyBtn.image.color = new Color32(164, 255, 164, 255);
+            NotifyBtn.transform.Find("Text").GetComponent<Text>().text = "下次上課前提醒";
+        }
+        else
+        {
+            NotifyBtn.image.color = new Color32(255, 164, 164, 255);
+            NotifyBtn.transform.Find("Text").GetComponent<Text>().text = "取消提醒";
+        }
+        int _notifyAddTime = PlayerPrefs.GetInt(_notifyName + "_Time", Convert.ToInt32(NotifyTimeDropdown.options[NotifyTimeDropdown.value].text));
+        for (int i = 0; i < NotifyTimeDropdown.options.Count; i++)
+        {
+            if (NotifyTimeDropdown.options[i].text == _notifyAddTime.ToString())
+            {
+                NotifyTimeDropdown.value = i;
+                break;
+            }
+        }
+    }
+
+    public void ResetAllScheduleNotifys()
+    {
+#if UNITY_ANDROID
+        AndroidNotificationCenter.CancelAllScheduledNotifications();
+#endif
+#if UNITY_IPHONE
+        iOSNotificationCenter.RemoveAllScheduledNotifications();
+#endif
+        string _d_timeList = "";
+        List<string> _notifyList = new List<string>();
+        for (int i = 0; i < TheSchedule.Courses.GetLength(0); i++)
+        {
+            for (int j = 0; j < TheSchedule.Courses.GetLength(1); j++)
+            {
+                if (TheSchedule.Courses[i, j] != null)
+                {
+                    Course _theCourse = TheSchedule.Courses[i, j];
+                    string _notifyName = _theCourse.FullCode + _theCourse.Name + "_notify";
+                    DateTime notifyTime = GetNotifyTime(_theCourse);
+                    if (DateTime.Now >= notifyTime)
+                    {
+                        notifyTime = notifyTime.AddDays(7);
+                    }
+                    if (PlayerPrefs.HasKey(_theCourse.FullCode + _theCourse.Name + "_notify") & PlayerPrefs.HasKey(_notifyName + "_Time"))
+                    {
+                        int _notifyEnabled = PlayerPrefs.GetInt(_theCourse.FullCode + _theCourse.Name + "_notify");
+                        if (_notifyEnabled == 1)
+                        {
+                            if (DateTime.Now <= notifyTime & !_notifyList.Contains(_notifyName))
+                            {
+                                Debug.Log("設定提醒時間:" + _notifyName + notifyTime);
+                                MainSystem.SetNotify(_theCourse.Name + "\n上課時間:" + _theCourse.Time, notifyTime);
+                                _notifyList.Add(_notifyName);
+                            }
+                        }
+                    }
+                    else
+                    {
+                        PlayerPrefs.SetInt(_notifyName, 1);
+                        Debug.Log("設定提醒時間:" + _notifyName + notifyTime);
+                        MainSystem.SetNotify(_theCourse.Name + "\n上課時間:" + _theCourse.Time, notifyTime);
+                        PlayerPrefs.SetInt(_notifyName + "_Time", 30);
+                    }
+                    _d_timeList += _theCourse.FullCode + _theCourse.Name + " - 提醒時間:前" + GetNotifyAddTime(_theCourse) + "分鐘\n"; 
+                }
+            }
+        }
+        //Debug.Log(_d_timeList);
+    }
+    public int GetNotifyAddTime(Course i_course)
+    {
+        return PlayerPrefs.GetInt(i_course + "_Time", Convert.ToInt32(NotifyTimeDropdown.options[NotifyTimeDropdown.value].text));
+    }
+    public DateTime GetNotifyTime(Course i_course)
+    {
+        DateTime _tmpTime = GetNextWeekday(DateTime.Now, (DayOfWeek)Convert.ToInt32(i_course.Day));
+        string[] _tmp = TheSchedule.Period[Convert.ToInt32(i_course.Period.Split('~')[0])].Split('~')[0].Split(':');
+        int _notifyAddTime = GetNotifyAddTime(i_course);
+        TimeSpan course_period = (new TimeSpan(Convert.ToInt32(_tmp[0]), Convert.ToInt32(_tmp[1]), 0)).Subtract(new TimeSpan(0, _notifyAddTime, 0));
+        _tmpTime = _tmpTime.Date + course_period;
+        if (DateTime.Now >= _tmpTime)
+        {
+            _tmpTime = _tmpTime.AddDays(7);
+        }
+        return _tmpTime;
+    }
+
     public static DateTime GetNextWeekday(DateTime start, DayOfWeek day)
     {
         // The (... + 7) % 7 ensures we end up with a value in the range [0, 6]

@@ -56,13 +56,13 @@
     <Analyzer Include="C:\Program Files (x86)\Microsoft Visual Studio Tools for Unity\16.0\Analyzers\Microsoft.Unity.Analyzers.dll" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Library\PackageCache\com.unity.mobile.notifications@1.4.2\Runtime\iOS\iOSNotificationCenter.cs" />
+    <Compile Include="Library\PackageCache\com.unity.mobile.notifications@1.4.2\Runtime\iOS\AssemblyInfo.cs" />
     <Compile Include="Library\PackageCache\com.unity.mobile.notifications@1.4.2\Runtime\iOS\AuthorizationRequest.cs" />
     <Compile Include="Library\PackageCache\com.unity.mobile.notifications@1.4.2\Runtime\iOS\iOSNotification.cs" />
     <Compile Include="Library\PackageCache\com.unity.mobile.notifications@1.4.2\Runtime\iOS\iOSNotificationTriggers.cs" />
-    <Compile Include="Library\PackageCache\com.unity.mobile.notifications@1.4.2\Runtime\iOS\iOSNotificationSettings.cs" />
-    <Compile Include="Library\PackageCache\com.unity.mobile.notifications@1.4.2\Runtime\iOS\iOSNotificationCenter.cs" />
     <Compile Include="Library\PackageCache\com.unity.mobile.notifications@1.4.2\Runtime\iOS\iOSNotificationsWrapper.cs" />
-    <Compile Include="Library\PackageCache\com.unity.mobile.notifications@1.4.2\Runtime\iOS\AssemblyInfo.cs" />
+    <Compile Include="Library\PackageCache\com.unity.mobile.notifications@1.4.2\Runtime\iOS\iOSNotificationSettings.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Library\PackageCache\com.unity.mobile.notifications@1.4.2\Runtime\iOS\Unity.Notifications.iOS.asmdef" />
