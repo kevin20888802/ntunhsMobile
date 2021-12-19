@@ -11,10 +11,13 @@
 
 # 課表
 - 點擊該課程可觀看詳細資訊  
-- 可以設定課前提醒  
 ![alt text](https://github.com/kevin20888802/ntunhsMobile/blob/main/readme/img/2.png?raw=true)
 ![alt text](https://github.com/kevin20888802/ntunhsMobile/blob/main/readme/img/3.png?raw=true)
 ![alt text](https://github.com/kevin20888802/ntunhsMobile/blob/main/readme/img/4.png?raw=true)
+- 可以設定課前提醒  
+![alt text](https://github.com/kevin20888802/ntunhsMobile/blob/main/readme/img/13.png?raw=true)
+![alt text](https://github.com/kevin20888802/ntunhsMobile/blob/main/readme/img/12.png?raw=true)
+![alt text](https://github.com/kevin20888802/ntunhsMobile/blob/main/readme/img/11.png?raw=true)
 
 # 修課明細  
 ![alt text](https://github.com/kevin20888802/ntunhsMobile/blob/main/readme/img/5.png?raw=true)
@@ -36,11 +39,13 @@
 ![alt text](https://github.com/kevin20888802/ntunhsMobile/blob/main/readme/img/8.png?raw=true)
 ![alt text](https://github.com/kevin20888802/ntunhsMobile/blob/main/readme/img/9.png?raw=true)
 
-# iLMS作業資訊
-<!>注意:需開啟ntunhsMobile_iLMS_api的伺服器
-<!>網址:https://github.com/kevin20888802/ntunhsMobile_iLMS_api
+# iLMS作業資訊  
+<!>注意:需開啟ntunhsMobile_iLMS_api的伺服器  
+<!>網址:https://github.com/kevin20888802/ntunhsMobile_iLMS_api  
 
-- 需先連接至開啟的伺服器位址(包含5001port號碼)
+- 需先連接至開啟的伺服器位址(包含5001port號碼)  
 
-- 顯示作業資訊及其繳交期限
-- 點選作業將顯示更詳細的資訊及原始網址
+- 顯示作業資訊及其繳交期限  
+- 點選作業將顯示更詳細的資訊及原始網址  
+![alt text](https://github.com/kevin20888802/ntunhsMobile/blob/main/readme/img/14.png?raw=true)
+![alt text](https://github.com/kevin20888802/ntunhsMobile/blob/main/readme/img/15.png?raw=true)
