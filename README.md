@@ -11,10 +11,10 @@
 
 # 課表
 - 點擊該課程可觀看詳細資訊  
+- 可以設定課前提醒  
 ![alt text](https://github.com/kevin20888802/ntunhsMobile/blob/main/readme/img/2.png?raw=true)
 ![alt text](https://github.com/kevin20888802/ntunhsMobile/blob/main/readme/img/3.png?raw=true)
 ![alt text](https://github.com/kevin20888802/ntunhsMobile/blob/main/readme/img/4.png?raw=true)
-- 可以設定課前提醒  
 ![alt text](https://github.com/kevin20888802/ntunhsMobile/blob/main/readme/img/13.png?raw=true)
 ![alt text](https://github.com/kevin20888802/ntunhsMobile/blob/main/readme/img/12.png?raw=true)
 ![alt text](https://github.com/kevin20888802/ntunhsMobile/blob/main/readme/img/11.png?raw=true)
