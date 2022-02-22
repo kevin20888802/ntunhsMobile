@@ -73,73 +73,73 @@ ScriptsOnlyBuild:
     - Class: 114
       Script: {instanceID: 1476}
     - Class: 114
+      Script: {instanceID: 1478}
+    - Class: 114
       Script: {instanceID: 1518}
     - Class: 114
-      Script: {instanceID: 1542}
+      Script: {instanceID: 1556}
     - Class: 114
-      Script: {instanceID: 1558}
+      Script: {instanceID: 1588}
     - Class: 114
-      Script: {instanceID: 1590}
+      Script: {instanceID: 1618}
     - Class: 114
-      Script: {instanceID: 1620}
+      Script: {instanceID: 1638}
     - Class: 114
-      Script: {instanceID: 1640}
+      Script: {instanceID: 1648}
     - Class: 114
-      Script: {instanceID: 1650}
+      Script: {instanceID: 1672}
     - Class: 114
-      Script: {instanceID: 1674}
+      Script: {instanceID: 1728}
     - Class: 114
-      Script: {instanceID: 1730}
+      Script: {instanceID: 1766}
     - Class: 114
-      Script: {instanceID: 1768}
+      Script: {instanceID: 1992}
     - Class: 114
-      Script: {instanceID: 1994}
+      Script: {instanceID: 2002}
     - Class: 114
-      Script: {instanceID: 2004}
+      Script: {instanceID: 2012}
     - Class: 114
-      Script: {instanceID: 2014}
+      Script: {instanceID: 2058}
     - Class: 114
-      Script: {instanceID: 2060}
+      Script: {instanceID: 2100}
     - Class: 114
-      Script: {instanceID: 2102}
+      Script: {instanceID: 2118}
     - Class: 114
-      Script: {instanceID: 2120}
+      Script: {instanceID: 2176}
     - Class: 114
-      Script: {instanceID: 2178}
+      Script: {instanceID: 2202}
     - Class: 114
-      Script: {instanceID: 2204}
+      Script: {instanceID: 2308}
     - Class: 114
-      Script: {instanceID: 2310}
+      Script: {instanceID: 2346}
     - Class: 114
-      Script: {instanceID: 2348}
+      Script: {instanceID: 2368}
     - Class: 114
-      Script: {instanceID: 2370}
+      Script: {instanceID: 2486}
     - Class: 114
-      Script: {instanceID: 2488}
+      Script: {instanceID: 2582}
     - Class: 114
-      Script: {instanceID: 2584}
+      Script: {instanceID: 2634}
     - Class: 114
-      Script: {instanceID: 2636}
+      Script: {instanceID: 2760}
     - Class: 114
-      Script: {instanceID: 2762}
+      Script: {instanceID: 2800}
     - Class: 114
-      Script: {instanceID: 2802}
+      Script: {instanceID: 2806}
     - Class: 114
-      Script: {instanceID: 2808}
+      Script: {instanceID: 2810}
     - Class: 114
-      Script: {instanceID: 2812}
+      Script: {instanceID: 2934}
     - Class: 114
-      Script: {instanceID: 2936}
+      Script: {instanceID: 2944}
     - Class: 114
-      Script: {instanceID: 2946}
+      Script: {instanceID: 2960}
     - Class: 114
-      Script: {instanceID: 2962}
+      Script: {instanceID: 2964}
     - Class: 114
-      Script: {instanceID: 2966}
+      Script: {instanceID: 3040}
     - Class: 114
-      Script: {instanceID: 3042}
-    - Class: 114
-      Script: {instanceID: 3068}
+      Script: {instanceID: 3066}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 128
@@ -173,6 +173,12 @@ ScriptsOnlyBuild:
     className: GraphicRaycaster
   - hash:
       serializedVersion: 2
+      Hash: 8aa3d6ccbcb54ee8db6c1229854adaaa
+    assemblyName: UnityEngine.UI.dll
+    namespaceName: UnityEngine.UI
+    className: ContentSizeFitter
+  - hash:
+      serializedVersion: 2
       Hash: a6e561615949734e9f12f9b61661f43e
     assemblyName: UnityEngine.UI.dll
     namespaceName: UnityEngine.UI
@@ -183,12 +189,6 @@ ScriptsOnlyBuild:
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: UI_AutoResizeText
-  - hash:
-      serializedVersion: 2
-      Hash: 8aa3d6ccbcb54ee8db6c1229854adaaa
-    assemblyName: UnityEngine.UI.dll
-    namespaceName: UnityEngine.UI
-    className: ContentSizeFitter
   - hash:
       serializedVersion: 2
       Hash: 77aaaaa51f7a8d8ff333a879741e47d2

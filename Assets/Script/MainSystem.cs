@@ -203,8 +203,9 @@ public class MainSystem : MonoBehaviour
             Schedule _info = new Schedule(JsonConvert.DeserializeObject<Dictionary<string, object>>(responseString.Result));
             return _info;
         }
-        catch
+        catch(Exception ex)
         {
+            Debug.Log(ex.StackTrace);
             MsgBox.Msg("連線失敗", "連線失敗");
             return null;
         }

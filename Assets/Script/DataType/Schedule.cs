@@ -53,7 +53,11 @@ public class Schedule
             int _day = Convert.ToInt32(allCourse[i]["Day"]);
             string[] _periods = allCourse[i]["Period"].Split('~');
             int _startPeriod = Convert.ToInt32(_periods[0]);
-            int _endPeriod = Convert.ToInt32(_periods[1]);
+            int _endPeriod = _startPeriod;
+            if (_periods.Length > 1)
+            {
+                _endPeriod = Convert.ToInt32(_periods[1]);
+            }
             Course _thisCourse = new Course(allCourse[i]);
             for (int j = _startPeriod; j <= _endPeriod; j++)
             {
